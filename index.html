@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mionick | Nick Mio</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8" />
+
+	<meta name="description" content="Self-proclaimed king of the amateurs! Sudo Amateur, if you will. Upcoming Software Engineer, Game Developer, Digital Artist. Tech Fanatic.">
+
+	<meta name="keywords" content="software, engineer, developer, game, digital, art, programmer, codemonkey">
+	<link rel="icon" href="beardicon2.png" />
+
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="./reset.css" type="css/text" />
+	<link rel="stylesheet" href="./large.css" type="css/text" />
+    <link rel="stylesheet" type="css/text" media="screen and (max-width: 780px)" href="./seveneighty.css" />
+    <link rel="stylesheet" type="css/text" media="screen and (max-height: 500px)" href="./heightLT500.css" />
+
+
+	<meta name="author" content="Nick Mio" />
+
+</head>
+
+
+<body id="body">
+	<!-- Navigation Header -->
+	<div id="header">
+		<div id="topblock">
+			<a href="#home"><img src="svg/beardlogo.svgz" alt="My face and beard. Enjoy." id="myface" /></a>
+			<a href="#home"><h1 class="button"><span id="logo"></span>NickMio</h1></a>
+		</div>
+
+
+		<div id="mainmenu">
+			<ul id="navigation">
+				<li><a id="link-games" href="#games" class="button">The World Unbound</a></li>
+				<li><a id="link-art" href="#art" class="button">Art</a></li>
+				<li><a id="link-about" href="#about" class="button">About</a></li>
+				<li><a id="link-contact" href="#contact" class="button">Contact</a></li>
+			</ul>
+		</div>
+    </div>
+
+
+    	<!-- Home -->
+    	<div id="home" >
+            <canvas id="homeCanvas" width="1000px" height="1000px">
+            </canvas>
+            
+            <div class="content">
+    		  <h2>WELCOME</h2>
+            </div>
+    	</div>
+    	<!-- /Home -->
+
+
+    	<!-- Games -->
+    	<div id="games" class="firstpanel">
+    		<div class="content">
+    			<h2>The World Unbound</h2>
+    			<p><em>The World Unbound</em> is a classic platformer with a slight twist that I am currently working on. It aims to tell a story while bending the players perception of 2D and 3D elements.</p>
+    		</div>
+    	</div>
+
+
+    	<!-- Art -->
+    	<div id="art" class="firstpanel">
+    		<div class="content">
+    		<h2>Featured Work</h2>
+    		<p>Welcome to my online portfolio!</p>
+    		<img src="images/dinkleberg.jpg" alt="Dinklebeeeerg!" />
+    		<p>this is overflowing let me scroll</p>
+    		</div>
+    	</div>
+
+
+    	<!-- About -->
+    	<div id="about" class="firstpanel">
+    		<div class="content">
+    			<h2>About Me</h2>
+                <div class="aboutTextWrapper">
+    			<p class="firstSentence">Hello! I'm Nick. I like to build things.</p>
+    			<p>I am a Software Engineering student at McMaster University (Canada), just about done my degree and hoping to start a career as a Game Designer. I am a tech enthusiast and would describe myself as an entry level: 
+    			</p>
+    			<ul>
+    				<li>Software Engineer</li>
+    				<li>Game Developer</li>
+    				<li>Web Designer</li>
+    				<li>Illustrator</li>
+    				<li>Circus Performer</li>
+    			</ul>
+    			<p>
+    				With the time I have that isn't dedicated to school I enjoy messing around with Photoshop, Illustrator, and any kind of code I can get my hands on. I am a huge fan of the SVG file format and get a great deal of satisfaction from squashing a bug in code.
+    			</p>
+            </div>
+    		</div>
+    		<a href="https://github.com/mionick" target="_blank"><img src="svg/github.svg" alt="Github Account" id="github"></a>
+    		<a href="http://www.linkedin.com/in/mionick" target="_blank"><img src="svg/linkedin.svg" alt="linkedin profile" id="linkedin"></a>
+    	</div>
+
+    	<!-- Contact -->
+    	<div id="contact" class="firstpanel">
+    		<div class="content">
+    			<h2>Drop Me a Line!</h2>
+    			<form id="contact-form">
+    				<fieldset>
+    					<label for="name">Name:</label>
+    					<input type="text" required maxlength="50" id="name" /><br />
+    					<label for="email">E-Mail:</label>
+    					<input type="text" required maxlength="70" id="email" /><br />
+    					<label for="subject">Subject:</label>
+    					<input type="text" required maxlength="70" id="subject" /><br />
+    					<label for="message">Message:</label>
+    					<textarea id="message" required value=""></textarea><br />
+    				</fieldset>
+
+    				<input type="submit" disabled value="Send"/>
+
+    			</form>
+    			<!-- forms and stuff -->
+    		</div>
+    	</div>
+
+    	<script type="text/javascript" src="panelFix.js"></script>
+    	<script type="text/javascript" src="starAnimation.js"></script>
+        <script type="text/javascript" src="canvas.js"></script>
+    	<noscript>This site enhanced by JS.</noscript>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,331 @@
+@font-face {
+    font-family: myImpact;
+    src: url(font/impact.ttf);
+}
+@font-face {
+    font-family: Comfortaa;
+    src: url(font/strasua.ttf);
+
+    /*src: url(font/zeroestwo.ttf);*/
+}
+
+/*silver and white gradient background ------------------------------------------------------------------------------------------------------------------------*/
+.button, .firstpanel {
+    background: #b5bdc8; /* Old browsers */
+    background: -moz-linear-gradient(top,  #b5bdc8 0%, #828c95 36%, #28343b 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b5bdc8), color-stop(36%,#828c95), color-stop(100%,#28343b)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #b5bdc8 0%,#828c95 36%,#28343b 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #b5bdc8 0%,#828c95 36%,#28343b 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #b5bdc8 0%,#828c95 36%,#28343b 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #b5bdc8 0%,#828c95 36%,#28343b 100%); /* W3C */
+}
+
+html, body{
+    min-height: 100%;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+}
+#header {
+    position: fixed;
+    z-index: 2000;
+    width: 30%;
+    height:100%;
+    margin: 0;
+    padding: 0;
+    min-width:220px;
+    max-width: 320px;
+    overflow-y: auto;
+
+    background-color: #111;
+    background:
+    url(./images/BG_stars.png) repeat 0 0, 
+    url(./svg/BG_gradSol.svg) no-repeat 0 0 / 100% 100%;
+
+}
+
+/*TopBlock ------------------------------------------------------------------------------------------------------------------------------------------*/
+#topblock {
+    position:relative;
+    width:95%;
+    margin: 2.5%;        
+
+}
+
+#topblock #myface{
+    width:80%;
+    margin-left: 10%;
+
+    background-color: #FFF;
+    border-radius: 50%;
+}
+#topblock a{
+    display:block;
+    width: 95%;
+    margin-left: 2.5%;
+}
+#topblock a h1{
+    width:100%;
+    font-size: 2.9em;
+    margin:0;
+    padding: 0;
+    font-family: Comfortaa, 'Arial', sans-serif;
+    overflow:hidden;
+    white-space: nowrap;
+    text-align: center;
+
+    text-shadow:
+    3px 2px 0px rgba(0,0,0,0.9);
+
+
+
+    width:100%;
+    min-width: 171px;
+}
+
+
+
+
+
+/* Main Menu ------------------------------------------------------------------------------------------------------------------------------------------*/
+
+#navigation a {
+    display:block;
+    width: 70%;
+
+    font-family: Comfortaa, 'Arial', sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+
+
+}
+/*buttons ------------------------------------------------------------------------------------------------------------------------------------------*/
+.button {
+    font-family: myImpact, Impact, Charcoal, 'Arial Black', sans-serif;
+    font-size: 1.1em;
+    color: #f2f2f2;
+    padding: 2% 4%;
+    overflow: hidden;
+    margin-left: 11%;
+
+    border: 2px solid #000000;
+    -moz-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(179,173,173,0.7);
+    -webkit-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(179,173,173,0.7);
+    box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(179,173,173,0.7);
+    text-shadow:
+    2px 2px 0px rgba(0,0,0,0.9);
+
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+
+}
+
+.button:hover {
+    background: #b5bdc8; /* Old browsers */
+    background: -moz-linear-gradient(top,  #FFF 0%, #FFF 36%, #FFF 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF), color-stop(36%,#828c95), color-stop(100%,#FFF)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #FFF 0%,#828c95 36%,#FFF 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #FFF 0%,#828c95 36%,#FFF 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #FFF 0%,#828c95 36%,#FFF 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #FFF 0%,#828c95 36%,#FFF 100%); /* W3C */
+    padding: 2% 6%;
+    margin-left: 9%
+
+
+
+}
+
+/*home ------------------------------------------------------------------------------------------------------------------------------------------*/
+#home {
+    position: absolute;
+    display: block;
+    min-height: 100%;
+    height: 100%;
+    overflow: auto;
+    width:66%;
+    padding: 0 2%;
+    margin-left: 30%;
+    z-index: 1;
+    background-size: 100% auto;
+    background-repeat: repeat;
+    background-attachment: scroll;
+}
+#homeCanvas {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+}
+#home .content {
+    position: absolute;
+    width:100%;
+    height: 100%;
+}
+
+#home h2 {
+    display: inherit;
+    margin-top: 10%;
+    font-size: 9em;
+    font-family: myImpact;
+    /*font-family: Comfortaa;*/
+    font-style: normal;
+
+    background-color: rgba(5, 5, 5, 0.5);
+
+}
+
+/*panels ------------------------------------------------------------------------------------------------------------------------------------------*/
+.firstpanel {
+    position: absolute;
+    height: 100%;
+    width: 66%;
+    padding: 0 2%;
+    overflow-y: auto;
+    margin-left: -102%;
+    background-color: #0000FF;
+    z-index: 2;
+    -webkit-transition: margin-left .7s ease-in-out;
+    -moz-transition: margin-left .7s ease-in-out;
+    -o-transition: margin-left .7s ease-in-out;
+    -ms-transition: margin-left .7s ease-in-out;
+    transition: margin-left 1s ease-in-out;
+}
+
+.firstpanel:target {
+    margin-left: 30%;
+}
+
+.firstpanel p {
+    background-color: rgba(15, 15, 15, 0.4);
+}
+
+
+.content h2 {
+    font-family: myImpact, Impact, Charcoal, 'Arial Black', sans-serif;
+    font-size: 4em;
+    font-weight: 200;
+    /*font-style: italic;*/
+    text-align: center;
+
+    color: #F4F4F4;
+
+    text-shadow: 3px 2px 0px rgba(0,0,0,0.9);
+    background-color: rgba(15, 15, 15, 0.7);
+
+}
+
+/*About Me Page------------------------------------------------------------------------------------------------------------------------------------------*/
+#about {
+}
+#aboutface {
+    position: absolute;
+    z-index: 1;
+    height:70%;
+    width: auto;
+    margin: 0 15%;
+    /*float:right;*/
+}
+
+#about p, #about ul {
+    text-align: center;
+    padding: 5px 10px;
+}
+#about .firstSentence {
+    font-size: 2em;
+}
+#about .aboutTextWrapper {
+    position: relative;
+    z-index: 5;
+    font-size: 1.3em;
+    background-color: rgba(15, 15, 15, 0.7);
+
+}
+
+#github, #linkedin {
+    position: relative;
+    z-index: 3;
+    height: 10%;
+    width: 45%;
+    padding: 0 2.5%;
+    margin: 0;
+
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-top-color: #111;
+
+    background-color: rgba(255, 255, 255, 0.7);
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+
+}
+
+#github:hover, #linkedin:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+#github {
+    float:left;
+    border-bottom-left-radius: 10%;
+
+}
+#linkedin {
+    float:right;
+    border-bottom-right-radius: 10%;
+
+}
+
+/*contact page ------------------------------------------------------------------------------------------------------------------------------------------*/
+#contact form{
+    width: 85%;
+    padding: 1.5%;
+    padding-top: 0;
+    max-width: 1000px;
+    min-width: 300px;
+    margin: 0 5%;
+    margin-top: 1em;
+
+    background-color: rgba(15, 15, 15, 0.4);
+
+}
+
+#contact form *{
+    width: 100%;
+}
+
+#contact input,#message {
+    box-sizing: border-box;
+    padding: 15px;
+    font-size: 1em;
+    color: #DDD;
+    background-color: #222;
+}
+
+#contact label {
+    font-size: 1.5em;
+}
+
+#message {
+    height: 10em;
+    -moz-transition: none 0s ease 0s;
+    -webkit-transition: none 0s ease 0s;
+    -transition: none 0s ease 0s;
+}
+
+/*Art Page ------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Use the content div for scrolling background*/
+#art .content {
+
+}
+
+

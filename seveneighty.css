@@ -1,0 +1,10 @@
+#home h2 {
+	font-size: 5em;
+}
+#about .aboutTextWrapper {
+	font-size: 1em;
+	padding: 3px;
+}
+#about p {
+	padding: 3px;
+}

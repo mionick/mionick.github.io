@@ -1,0 +1,48 @@
+/* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,pre,form,fieldset,input,textarea,p,blockquote,th,td, img, a { 
+	margin:0;
+	padding:0;
+	border: 0;
+	font-family: euphemia;
+}
+html,body {
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+address,caption,cite,code,dfn,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym { border:0;
+}
+body{
+	background-color: #222;
+	font-family: 'Electrolize', Arial, sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	color: #fff;
+	height:100%;
+}
+a{
+	text-decoration: none;
+}
+.clr{
+	clear: both;
+}
