@@ -3,7 +3,7 @@
     src: url(font/impact.ttf);
 }
 @font-face {
-    font-family: Comfortaa;
+    font-family: strasua;
     src: url(font/strasua.ttf);
 
     /*src: url(font/zeroestwo.ttf);*/
@@ -37,10 +37,11 @@ html, body{
     max-width: 320px;
     overflow-y: auto;
 
-    background-color: #111;
     background:
     url(./images/BG_stars.png) repeat 0 0, 
     url(./svg/BG_gradSol.svg) no-repeat 0 0 / 100% 100%;
+    background-color: #050505;
+
 
 }
 
@@ -69,7 +70,7 @@ html, body{
     font-size: 2.9em;
     margin:0;
     padding: 0;
-    font-family: Comfortaa, 'Arial', sans-serif;
+    font-family: strasua, impact,'Arial', sans-serif;
     overflow:hidden;
     white-space: nowrap;
     text-align: center;
@@ -93,7 +94,7 @@ html, body{
     display:block;
     width: 70%;
 
-    font-family: Comfortaa, 'Arial', sans-serif;
+    font-family: strasua, impact, 'Arial', sans-serif;
     font-size: 2em;
     font-weight: 700;
     text-align: center;
@@ -175,8 +176,7 @@ html, body{
     display: inherit;
     margin-top: 10%;
     font-size: 9em;
-    font-family: myImpact;
-    /*font-family: Comfortaa;*/
+    /*font-family: strasua;*/
     font-style: normal;
 
     background-color: rgba(5, 5, 5, 0.5);
@@ -328,4 +328,8 @@ html, body{
 
 }
 
+/*games Page ------------------------------------------------------------------------------------------------------------------------------------------*/
+#games .content {
+    background-image: url(./svg/BG_gradSol.svg);
+}
 
