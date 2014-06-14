@@ -288,7 +288,7 @@ html, body{
 /*contact page ------------------------------------------------------------------------------------------------------------------------------------------*/
 #contact form{
     width: 85%;
-    padding: 1.5%;
+    padding: 2.5%;
     padding-top: 0;
     max-width: 1000px;
     min-width: 300px;
@@ -330,7 +330,7 @@ html, body{
     font-size: 1.5em;
     text-align: center;
     width: 85%;
-    padding: 1.5%;
+    padding: 1% 2.5%;
     padding-top: 0;
     max-width: 1000px;
     min-width: 300px;
