@@ -105,7 +105,7 @@
     	<div id="contact" class="firstpanel">
     		<div class="content">
     			<h2>Drop Me a Line!</h2>
-    			<form method="POST" id="contact-form">
+<!--     			<form method="POST" id="contact-form">
 					<label for="name">Name:</label>
 					<input type="text" required maxlength="50" id="name" /><br />
 					<label for="email">E-Mail:</label>
@@ -113,12 +113,33 @@
 					<label for="subject">Subject:</label>
 					<input type="text" maxlength="70" id="subject" /><br />
 					<label for="message">Message:</label>
-					<textarea id="message" required value=""></textarea><br />
+					<textarea id="message" required></textarea><br />
 
-    				<input type="submit" id="submitbutton" value="Send"/>
-                    <label id="warning" for="submitbutton">Note: This form requires JavaScript to work.</label>
+    				<input type="submit" value="Send"/>
+                    <label id="warning">Note: This form requires JavaScript to work.</label>
 
-    			</form>
+    			</form> -->
+                <form method="POST" action="http://forms.brace.io/mio.clause@gmail.com">
+
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input name="name" type="name" class="form-control" id="name" placeholder="Enter name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input name="_replyto" type="email" class="form-control" id="email" placeholder="Enter email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea name="message" id="message" class="form-control" rows="3"></textarea>    
+                    </div>
+
+
+                    <button type="submit">Submit</button>
+
+                </form>
                 <p>Or you can contact me at this e-mail address:</p>
                 <p>
                     <img src="./images/email.png" alt="mio dot clause at gmail dot com" id="emailPic" />
