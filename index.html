@@ -106,19 +106,17 @@
     		<div class="content">
     			<h2>Drop Me a Line!</h2>
     			<form method="POST" id="contact-form">
-    				<fieldset>
-    					<label for="name">Name:</label>
-    					<input type="text" required maxlength="50" id="name" /><br />
-    					<label for="email">E-Mail:</label>
-    					<input type="text" required maxlength="70" id="email" /><br />
-    					<label for="subject">Subject:</label>
-    					<input type="text" required maxlength="70" id="subject" /><br />
-    					<label for="message">Message:</label>
-    					<textarea id="message" required value=""></textarea><br />
-    				</fieldset>
+					<label for="name">Name:</label>
+					<input type="text" required maxlength="50" id="name" /><br />
+					<label for="email">E-Mail:</label>
+					<input type="email" required maxlength="70" id="email" /><br />
+					<label for="subject">Subject:</label>
+					<input type="text" maxlength="70" id="subject" /><br />
+					<label for="message">Message:</label>
+					<textarea id="message" required value=""></textarea><br />
 
     				<input type="submit" id="submitbutton" value="Send"/>
-                    <label id="warning">Note: This form requires JavaScript to work.</label>
+                    <label id="warning" for="submitbutton">Note: This form requires JavaScript to work.</label>
 
     			</form>
                 <p>Or you can contact me at this e-mail address:</p>
