@@ -105,7 +105,7 @@
     	<div id="contact" class="firstpanel">
     		<div class="content">
     			<h2>Drop Me a Line!</h2>
-    			<form id="contact-form">
+    			<form method="POST" id="contact-form">
     				<fieldset>
     					<label for="name">Name:</label>
     					<input type="text" required maxlength="50" id="name" /><br />
@@ -117,16 +117,21 @@
     					<textarea id="message" required value=""></textarea><br />
     				</fieldset>
 
-    				<input type="submit" disabled value="Send"/>
+    				<input type="submit" id="submitbutton" value="Send"/>
+                    <label id="warning">Note: This form requires JavaScript to work.</label>
 
     			</form>
-    			<!-- forms and stuff -->
+                <p>Or you can contact me at this e-mail address:</p>
+                <p>
+                    <img src="./images/email.png" alt="mio dot clause at gmail dot com" id="emailPic" />
+                </p>
     		</div>
     	</div>
 
     	<script type="text/javascript" src="panelFix.js"></script>
     	<script type="text/javascript" src="starAnimation.js"></script>
         <script type="text/javascript" src="canvas.js"></script>
+        <script type="text/javascript" src="formFix.js"></script> 
     	<noscript>This site enhanced by JS.</noscript>
     </div>
 </body>
