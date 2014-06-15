@@ -26,6 +26,7 @@ html, body{
     height: 100%;
     position: relative;
 }
+
 #header {
     position: fixed;
     z-index: 2000;
@@ -98,6 +99,8 @@ html, body{
     font-size: 2em;
     font-weight: 700;
     text-align: center;
+    color: #f2f2f2;
+    
 
 
 }
@@ -193,6 +196,7 @@ html, body{
     margin-left: -102%;
     background-color: #0000FF;
     z-index: 2;
+
     -webkit-transition: margin-left .7s ease-in-out;
     -moz-transition: margin-left .7s ease-in-out;
     -o-transition: margin-left .7s ease-in-out;
@@ -208,7 +212,8 @@ html, body{
     background-color: rgba(15, 15, 15, 0.4);
 }
 
-
+.content {
+}
 .content h2 {
     font-family: myImpact, Impact, Charcoal, 'Arial Black', sans-serif;
     font-size: 4em;
@@ -219,7 +224,7 @@ html, body{
     color: #F4F4F4;
 
     text-shadow: 3px 2px 0px rgba(0,0,0,0.9);
-    background-color: rgba(15, 15, 15, 0.7);
+    /*background-color: rgba(15, 15, 15, 0.7);*/
 
 }
 
@@ -257,6 +262,7 @@ html, body{
     width: 45%;
     padding: 0 2.5%;
     margin: 0;
+    margin-bottom: 1em;
 
     border-top-style: solid;
     border-top-width: 3px;
@@ -299,6 +305,10 @@ html, body{
 
 }
 
+#contact .content {
+    padding-bottom: 1em;
+}
+
 #contact form *{
     width: 100%;
 }
@@ -306,7 +316,7 @@ html, body{
 #contact input,#message {
     box-sizing: border-box;
     padding: 15px;
-    font-size: 1em;
+    font-size: 1.1em;
     color: #DDD;
     background-color: #222;
 }
@@ -317,9 +327,8 @@ html, body{
 
 #message {
     height: 10em;
-    -moz-transition: none 0s ease 0s;
-    -webkit-transition: none 0s ease 0s;
-    -transition: none 0s ease 0s;
+    max-width: 100%;
+
 }
 
 #contact #warning {

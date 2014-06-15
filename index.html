@@ -95,6 +95,11 @@
     			<p>
     				With the time I have that isn't dedicated to school I enjoy messing around with Photoshop, Illustrator, and any kind of code I can get my hands on. I am a huge fan of the SVG file format and get a great deal of satisfaction from squashing a bug in code.
     			</p>
+                </div>
+                <h2>About The Site</h2>
+                <div class="aboutTextWrapper">
+                <p>This site is hosted on <a href="https://pages.github.com/">github pages</a>. That means it is a static site! No server side. The form in the contact section works via <a href="http://forms.brace.io/">Brace</a>.</p>
+                <p>It is intended to showoff projects I'm proud of and the quality of work that I do. The first installment is this website itself! All mark-up, css, and JavaScript used on this website was coded by me without the aid of any WYSIWYG editors. All images belong to me and were created by me. I hope you enjoy this site as much as I do!</p>
             </div>
     		</div>
     		<a href="https://github.com/mionick" target="_blank"><img src="svg/github.svg" alt="Github Account" id="github"></a>
@@ -105,7 +110,7 @@
     	<div id="contact" class="firstpanel">
     		<div class="content">
     			<h2>Drop Me a Line!</h2>
-                <form method="POST" action="http://forms.brace.io/mio.clause@gmail.com">
+                <form id="contact-form" method="POST" >
 
                     <div class="form-group">
                         <label for="name">Name:</label>
@@ -114,7 +119,7 @@
 
                     <div class="form-group">
                         <label for="email">Email Address:</label>
-                        <input name="_replyto" type="email" class="form-control" id="email" placeholder="Enter email" required>
+                        <input name="_replyto" type="email" class="form-control" id="email" placeholder="Enter Email" required>
                     </div>
 
                     <div class="form-group">
