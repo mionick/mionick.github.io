@@ -299,7 +299,6 @@ html, body{
     max-width: 1000px;
     min-width: 300px;
     margin: 0 5%;
-    margin-top: 1em;
 
     background-color: rgba(15, 15, 15, 0.4);
 
@@ -338,8 +337,8 @@ html, body{
 #contact p {
     font-size: 1.5em;
     text-align: center;
-    width: 85%;
-    padding: 1% 2.5%;
+    width: 75%;
+    padding: 1% 7.5%;
     padding-top: 0;
     max-width: 1000px;
     min-width: 300px;
@@ -348,6 +347,10 @@ html, body{
 #contact img {
     height: 1.5em;
     width: auto;
+}
+
+p#introP {
+    padding-top: 1em;
 }
 
 /*Art Page ------------------------------------------------------------------------------------------------------------------------------------------*/
