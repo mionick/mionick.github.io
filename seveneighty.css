@@ -8,3 +8,10 @@
 #about p {
 	padding: 3px;
 }
+#contact form, #contact p {
+	margin: 0;
+	width: 95%;
+}
+#contact form {
+	margin-top: 1em;
+}

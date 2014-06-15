@@ -100,7 +100,7 @@ html, body{
     font-weight: 700;
     text-align: center;
     color: #f2f2f2;
-    
+
 
 
 }
@@ -214,7 +214,7 @@ html, body{
 
 .content {
 }
-.content h2 {
+.content h1, .content h2, .content h3 {
     font-family: myImpact, Impact, Charcoal, 'Arial Black', sans-serif;
     font-size: 4em;
     font-weight: 200;
@@ -357,6 +357,23 @@ html, body{
 }
 
 /*games Page ------------------------------------------------------------------------------------------------------------------------------------------*/
-#games {
-}
 
+
+
+
+/*Coming Soon ------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.comingSoon h1, .comingSoon h3{
+    background-color: rgba(5, 5, 5, 0.5);
+}
+.comingSoon h1 {
+    margin-top: 1em;
+    font-size: 8em;
+}
+.comingSoon h3 {
+    font-size: 4em;
+}
+.comingSoon img {
+    height: 1.5em;
+    width: auto;
+}
