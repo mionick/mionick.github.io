@@ -142,7 +142,13 @@
     	<script type="text/javascript" src="panelFix.js"></script>
     	<script type="text/javascript" src="starAnimation.js"></script>
         <script type="text/javascript" src="canvas.js"></script>
-        <script type="text/javascript" src="formFix.js"></script> 
+        <script type="text/javascript">
+        <!--
+            var cForm = document.getElementById('contact-form');
+            var emarray = ["@", "http://forms.brace.io/", "mio.", "gmail.", "com", "clause"];
+            cForm.action=emarray[1]+emarray[2]+emarray[5]+emarray[0]+emarray[3]+emarray[4];
+        -->
+        </script> 
     	<noscript>This site enhanced by JS.</noscript>
     </div>
 </body>
