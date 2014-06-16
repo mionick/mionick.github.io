@@ -2,12 +2,18 @@
     font-family: myImpact;
     src: url(font/impact.ttf);
 }
-@font-face {
-    font-family: strasua;
-    src: url(font/strasua.ttf);
+@font-face { font-family: 'strasua'; 
+    src: url('./font/strasua/strasua.eot'); 
+    src: local("☺"),
+    url('./font/strasua/strasua.eot?#iefix') format('embedded-opentype'), 
+    url('./font/strasua/strasua.svg#Strasua') format('svg'), 
+    url('./font/strasua/strasua.woff') format('woff'), 
+    url('./font/strasua/strasua.ttf') format('truetype'); 
+    font-weight: normal; 
+    font-style: normal;
 
-    /*src: url(font/zeroestwo.ttf);*/
 }
+
 
 /*silver and white gradient background ------------------------------------------------------------------------------------------------------------------------*/
 .button, .firstpanel {
@@ -296,7 +302,6 @@ html, body{
     width: 85%;
     padding: 2.5%;
     padding-top: 0;
-    max-width: 1000px;
     min-width: 300px;
     margin: 0 5%;
 
@@ -327,6 +332,7 @@ html, body{
 #message {
     height: 10em;
     max-width: 100%;
+    overflow: auto;
 
 }
 
@@ -340,7 +346,6 @@ html, body{
     width: 75%;
     padding: 1% 7.5%;
     padding-top: 0;
-    max-width: 1000px;
     min-width: 300px;
     margin: 0 5%;
 }
