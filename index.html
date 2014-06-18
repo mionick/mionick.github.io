@@ -155,6 +155,13 @@
             var cForm = document.getElementById('contact-form');
             var emarray = ["@", "http://forms.brace.io/", "mio.", "gmail.", "com", "clause"];
             cForm.action=emarray[1]+emarray[2]+emarray[5]+emarray[0]+emarray[3]+emarray[4];
+
+            var epic = document.getElementById('emailPic');
+            var newTemp = epic.parentNode;
+            newTemp.removeChild(epic);
+            newTemp.innerHTML = emarray[2]+emarray[5]+emarray[0]+emarray[3]+emarray[4];
+            epic.parentNode.replaceChild(newTemp, epic);
+
         -->
         </script> 
     	<noscript>This site enhanced by JS.</noscript>
