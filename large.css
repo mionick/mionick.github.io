@@ -37,7 +37,7 @@ html, body{
 #header {
     position: fixed;
     z-index: 2000;
-    width: 30%;
+    width: 25%;
     height:100%;
     margin: 0;
     padding: 0;
@@ -47,7 +47,7 @@ html, body{
 
     background:
     url(./images/BG_stars.png) repeat 0 0, 
-    url(./svg/BG_gradSol.svg) no-repeat 0 0 / 100% 100%;
+    url('./svg/BG_gradSol.svg') no-repeat 0 0 / 100% 100%;
     background-color: #050505;
 
 
@@ -175,11 +175,13 @@ html, body{
     position:absolute;
     width: 100%;
     height: 100%;
+    z-index: 3;
 }
 #home .content {
     position: absolute;
     width:100%;
-    height: 100%;
+    height: 60%;
+    margin-top: 10%
 }
 
 #home h2 {
@@ -190,7 +192,11 @@ html, body{
     font-style: normal;
 
     background-color: rgba(5, 5, 5, 0.5);
-
+}
+#home img {
+    position: relative;
+    width: 100%;
+    z-index: 4;
 }
 
 /*panels ------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -227,6 +233,7 @@ html, body{
     font-weight: 200;
     /*font-style: italic;*/
     text-align: center;
+    clear: both;
 
     color: #F4F4F4;
 
@@ -238,14 +245,28 @@ html, body{
 /*About Me Page------------------------------------------------------------------------------------------------------------------------------------------*/
 #about {
 }
-#aboutface {
-    position: absolute;
-    z-index: 1;
-    height:70%;
-    width: auto;
-    margin: 0 15%;
-    /*float:right;*/
+#aboutPic {
+    width: 90%;
+    padding: 1em 5%;
+    background-color: rgba(15, 15, 15, 0.7);
+
 }
+#aboutPic img {
+    width: 50%;
+    height: auto;
+    position: relative;
+}
+#me {
+    float: left;
+}
+#code {
+    float: right;
+
+}
+#aboutPic div {
+    clear: both;
+}
+
 
 #about p, #about ul {
     text-align: center;

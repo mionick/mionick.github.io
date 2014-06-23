@@ -7,7 +7,7 @@ function panelResize() {
 
     //adjusting homepage regardless of panel open
     var home = document.getElementById("home");
-    if(curWidth>1067) {
+    if(curWidth>1276) {
         home.style.width = curWidth - 320 + "px";
         home.style.padding = "0";
         home.style.marginLeft = "320px";
@@ -16,9 +16,9 @@ function panelResize() {
         home.style.padding = "0";
         home.style.marginLeft = "220px";
     } else {
-        home.style.width = "70%";
+        home.style.width = "75%";
         home.style.padding = "0";
-        home.style.marginLeft = "30%";
+        home.style.marginLeft = "25%";
     }
 
 
@@ -31,7 +31,7 @@ function panelResize() {
         for (i = 0; i<panels.length; i++){ //loop through panels
 
             //panels[i] is target
-            if(curWidth>1067) {
+            if(curWidth>1276) {
                 //HUGE
                 panels[i].style.width = curWidth - 380 + "px";
                 panels[i].style.padding = "0 30px";    
@@ -43,9 +43,9 @@ function panelResize() {
                 panels[i].style.marginLeft = "220px";
             } else {
                 //RESPONSIVE
-                panels[i].style.width = "66%";
+                panels[i].style.width = "71%";
                 panels[i].style.padding = "0 2%";
-                panels[i].style.marginLeft = "30%";
+                panels[i].style.marginLeft = "25%";
             }
             if (panels[i].getAttribute('id') != targetId) 
             {

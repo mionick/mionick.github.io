@@ -37,7 +37,6 @@
 		<div id="mainmenu">
 			<ul id="navigation">
 				<li><a id="link-games" href="#games" class="button">The World Unbound</a></li>
-				<li><a id="link-art" href="#art" class="button">Work</a></li>
 				<li><a id="link-about" href="#about" class="button">About</a></li>
 				<li><a id="link-contact" href="#contact" class="button">Contact</a></li>
 			</ul>
@@ -49,9 +48,8 @@
     	<div id="home" >
             <canvas id="homeCanvas" width="1000px" height="1000px">
             </canvas>
-            
             <div class="content">
-    		  <h2>WELCOME</h2>
+    		<img src="./svg/welcome2.svg" alt="welcome!">
             </div>
     	</div>
     	<!-- /Home -->
@@ -70,23 +68,10 @@
     	</div>
 
 
-    	<!-- Art -->
-    	<div id="art" class="firstpanel">
-    		<div class="content">
-    		<h2>Featured Work</h2>
-    		<p>Welcome to my online portfolio!</p>
-            <div class="comingSoon">
-                <a href="#about"><h1>COMING SOON!</h1>
-                <h3>Next page here!</h3></a>
-            </div>
-            <img src="images/dinkleberg.jpg" alt="Dinklebeeeerg!" />
-    		</div>
-    	</div>
-
-
     	<!-- About -->
     	<div id="about" class="firstpanel">
     		<div class="content">
+
     			<h2>About Me</h2>
                 <div class="aboutTextWrapper">
     			<p class="firstSentence">Hello! I'm Nick. I like to build things.</p>
@@ -102,6 +87,11 @@
     			<p>
     				With the time I have that isn't dedicated to school I enjoy messing around with Photoshop, Illustrator, and any kind of code I can get my hands on. I am a huge fan of the SVG file format and get a great deal of satisfaction from squashing a bug in code.
     			</p>
+                </div>
+                <div id="aboutPic">
+                    <img id="me" src="images/about.png" alt="Dry-erase boards are remarkable.">
+                    <img id="code" src="./svg/humanCode.svg" alt="What do you call dangerous precipitation? A rain of terror.">
+                    <div></div>
                 </div>
                 <h2>About The Site</h2>
                 <div class="aboutTextWrapper">
@@ -160,7 +150,6 @@
             var newTemp = epic.parentNode;
             newTemp.removeChild(epic);
             newTemp.innerHTML = emarray[2]+emarray[5]+emarray[0]+emarray[3]+emarray[4];
-            epic.parentNode.replaceChild(newTemp, epic);
 
         -->
         </script> 
