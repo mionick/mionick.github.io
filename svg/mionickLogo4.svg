@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1121px"
+	 height="320px" viewBox="0 0 1121 320" enable-background="new 0 0 1121 320" xml:space="preserve">
+<g id="Layer_1">
+	<g>
+		<polygon fill="#00CC00" stroke="#000000" stroke-miterlimit="10" points="246.651,0.5 183.015,319.5 283.015,319.5 346.651,0.5 		
+			"/>
+		<polygon fill="#00CC99" stroke="#000000" stroke-miterlimit="10" points="346.651,0.5 283.015,319.5 383.015,319.5 446.651,0.5 		
+			"/>
+		<polygon fill="#0099CC" stroke="#000000" stroke-miterlimit="10" points="446.651,0.5 383.015,319.5 483.016,319.5 546.651,0.5 		
+			"/>
+		<polygon fill="#E40000" stroke="#000000" stroke-miterlimit="10" points="0.5,0.5 0.5,231.852 46.651,0.5 		"/>
+		<polygon fill="#99CC00" stroke="#000000" stroke-miterlimit="10" points="146.651,0.5 83.015,319.5 183.015,319.5 246.651,0.5 		
+			"/>
+		<polygon fill="#0000CC" stroke="#000000" stroke-miterlimit="10" points="546.651,0.5 483.016,319.5 583.016,319.5 646.651,0.5 		
+			"/>
+		<polygon fill="#CC9900" stroke="#000000" stroke-miterlimit="10" points="46.651,0.5 0.5,231.852 0.5,319.5 83.015,319.5 
+			146.651,0.5 		"/>
+		<polygon fill="#CC9900" stroke="#000000" stroke-miterlimit="10" points="946.651,0.5 883.016,319.5 983.016,319.5 1046.651,0.5 
+					"/>
+		<polygon fill="#99CC00" stroke="#000000" stroke-miterlimit="10" points="1120.5,0.5 1046.651,0.5 983.016,319.5 1083.016,319.5 
+			1120.5,131.594 		"/>
+		<polygon fill="#00CC00" stroke="#000000" stroke-miterlimit="10" points="1120.5,131.594 1083.016,319.5 1120.5,319.5 		"/>
+		<polygon fill="#E40000" stroke="#000000" stroke-miterlimit="10" points="846.651,0.5 783.016,319.5 883.016,319.5 946.651,0.5 		
+			"/>
+		<polygon fill="#9900CC" stroke="#000000" stroke-miterlimit="10" points="646.651,0.5 583.016,319.5 683.016,319.5 746.651,0.5 		
+			"/>
+		<polygon fill="#CC0099" stroke="#000000" stroke-miterlimit="10" points="746.651,0.5 683.016,319.5 783.016,319.5 846.651,0.5 		
+			"/>
+	</g>
+	<rect x="1" y="18" width="1120" height="284"/>
+</g>
+<g id="Layer_2">
+	<polygon fill="#FFFFFF" points="21,280 21,40 61,40 51,60 121,60 221,60 231,280 191,280 191,90 141,90 151,280 101,280 111,90 
+		51,90 61,280 	"/>
+	<polygon fill="#FFFFFF" points="251,280 301,280 291,250 281,250 271,120 251,120 	"/>
+	<polygon fill="#FFFFFF" points="241,100 281,100 291,50 241,50 	"/>
+	<polygon fill="#FFFFFF" points="521,90 561,90 551,110 661,110 671,280 631,280 631,140 551,140 561,280 521,280 	"/>
+	<polygon fill="#FFFFFF" points="691,280 741,280 731,240 721,240 711,110 691,110 	"/>
+	<polygon fill="#FFFFFF" points="681,90 721,90 731,40 681,40 	"/>
+	<polygon fill="#FFFFFF" points="751,100 751,280 931,280 911,250 791,249.5 781,130.5 911,130 931,100 	"/>
+	<polygon fill="#FFFFFF" points="941,280 981,280 971,160 1071,160 1071,280 1111,280 1101,130 1071,130 1091,60 1041,60 1041,130 
+		971,130 981,30 941,30 	"/>
+	<path fill="#FFFFFF" d="M301,110l10,170h180l10-170H301z M451,250H351l-10-110h120L451,250z"/>
+</g>
+</svg>
