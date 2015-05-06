@@ -227,7 +227,7 @@ html, body{
 
 .content {
 }
-.content h1, .content h2, .content h3 {
+.content h1, .content h2, .content h3, .content h4 {
     font-family: myImpact, Impact, Charcoal, 'Arial Black', sans-serif;
     font-size: 4em;
     font-weight: 200;
@@ -242,6 +242,9 @@ html, body{
 
 }
 
+.content h4 {
+    font-size: 1.5em;
+}
 /*About Me Page------------------------------------------------------------------------------------------------------------------------------------------*/
 #about {
 }
@@ -380,14 +383,106 @@ p#introP {
     padding-top: 1em;
 }
 
-/*Art Page ------------------------------------------------------------------------------------------------------------------------------------------*/
-/*Use the content div for scrolling background*/
-#art .content {
 
+/*Past Work Page ------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.pastwork {
+    float: left;
+    width: 50%;
+    background-color: rgba(15, 15, 15, 0.4);
+}
+.pastwork p {
+    padding: 3px 7px;
 }
 
-/*games Page ------------------------------------------------------------------------------------------------------------------------------------------*/
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
 
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#capstone {
+    background-color: rgba(15, 15, 15, 0.4);
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+#capstone .triplet {
+    width: 32%;
+    float: left;
+}
+
+#appmainmenu {
+    margin-left: 1%;
+}
+
+#routemap {
+    margin: 0 1% 0 1%;
+}
+
+#favmenu {
+    margin-right: 1%;
+}
+
+#buscheck {
+    margin-top: 0.5em;
+}
+
+#buscheck a {
+    float: left;
+    width: 40%;
+    margin: 0 5%
+}
+
+.tripletparagraph {
+    margin: 0 1% 0 1%;
+}
+
+#capstone p, #capstone ul{
+    clear: both;
+    text-align: center;
+    padding: 0.5em 0 0.5em 0;
+}
+
+#capstone ol {
+    clear: both;
+    padding: 0.5em 0 0.5em 0;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: decimal;
+}
+
+#capstone h2,#capstone h3, #capstone h4 {
+    background-color: rgba(15, 15, 15, 0.7);
+}
+
+#capstone h2 {
+    font-size: 3em;
+}
+
+#capstone h3 {
+    font-size: 2.5em;
+}
+
+#capstone h4 {
+    font-size: 2em;
+}
+
+#applicationlogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
 
 
 
