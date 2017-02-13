@@ -1,0 +1,5 @@
+throw.png,76,125,11
+fail.png,125,66,10
+noice.png,190,72,10
+uhhh.png,208,72,10
+2clutch.png,243,67,10
