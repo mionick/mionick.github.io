@@ -1,60 +1,123 @@
 
 <style type="text/css">
-.english {
-	display: none;
-	position: absolute;
-	left: 2em;
-	bottom: 2em;
-	padding: 1em;
-	background: #333;
-	color: #EEE;
-	border: 1px black solid;
-	border-radius: 10px;
-	z-index: 10;
-	font-size: 0.75em;
-	max-width: 80%;    
-	white-space: pre-wrap;
-}
+	iframe {
+		width: 100%;
+	}
+	body {
+		background-color: #222;
+		color: #EEE;
+	}
+	#content {
+		padding: 0 10%;
+	}
+	.english {
+		display: none;
+		position: absolute;
+		left: 2em;
+		bottom: 2em;
+		padding: 1em;
+		background: #333;
+		color: #EEE;
+		border: 1px black solid;
+		border-radius: 10px;
+		z-index: 10;
+		font-size: 0.75em;
+		max-width: 80%;    
+		white-space: pre-wrap;
+	}
 
-.chinese:hover + p + .english, 
-.english:hover,   
-.simplified:hover + .english
-{
-	display: block;
-}
+	.chinese:hover + p + p + .english, 
+	.simplified:hover + p + .english,
+	.pinyin:hover + .english,
+	.english:hover
+	{
+		display: block;
+	}
 
-.chinese {
-	font: Roboto, Arial, sans-serif;
-	display: inline-block;
-}
-.simplified {
-	font: Roboto, Arial, sans-serif;
-	display: none;
-}
+	.chinese,
+	.simplified,
+	.pinyin {
+		font: Roboto, Arial, sans-serif;
+	}
 
-.line {
-	font-size: 1.5em;
-	display: block;
-	position: relative;
-}
-pre, p {
-	margin: 0;
-}
-</style>>
+	.line {
+		font-size: 1.5em;
+		display: block;
+		position: relative;
+	}
+	pre, p {
+		margin: 0;
+	}
+	#characterSetForm {
+		text-align: center;
+	}
+</style>
 
-<iframe width="1223" height="683" src="https://www.youtube.com/embed/xN3sUTAzwiM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<style type="text/css" id="mutable-style">
+	.chinese {
+		display: inline-block;
+	}
+	.simplified {
+		display: none;
+	}
+	.pinyin {
+		display: none;
+	}
+</style>
 
-<iframe width="1349" height="480" src="https://www.youtube.com/embed/EG-_9m88pfM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!--
+<div class="line">
+	<p class="chinese">
+	</p>
+	<p class="simplified">
+	</p>
+	<p class="pinyin">
+	</p>
+	<p class="pinyin">
+	</p>
+	<pre class="english">
+	</pre>
+</div>
 
-<iframe width="1903" height="779" src="https://www.youtube.com/embed/1mMZGXRGv50?list=RD1mMZGXRGv50" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="1903" height="779" src="https://www.youtube.com/embed/7eAhGwBscZA?list=RD1mMZGXRGv50" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+-->
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/AfSd9ryrv2k' frameborder='0' allowfullscreen></iframe></div>
+
+
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/EG-_9m88pfM' frameborder='0' allowfullscreen></iframe></div>
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/1mMZGXRGv50?list=RD1mMZGXRGv50' frameborder='0' allowfullscreen></iframe></div>
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/7eAhGwBscZA?list=RD1mMZGXRGv50' frameborder='0' allowfullscreen></iframe></div>
+
+<form name="characterSetForm" id="characterSetForm">
+	<input type="radio" name="characterSet" value="chinese" checked="true">Traditional
+	<input type="radio" name="characterSet" value="simplified">Simplified
+	<input type="radio" name="characterSet" value="pinyin">Pinyin
+</form>
+<script type="text/javascript">
+	var supportedSets = ['chinese', 'simplified', 'pinyin']
+	var styleTag = document.getElementById('mutable-style');
+
+	let changeStyle = function(characterSet) {
+	        let styleString = '';
+			for (let i = 0; i < supportedSets.length; i++) {
+				styleString += `.${ supportedSets[i] } { display: ${ characterSet === supportedSets[i] ? 'inline-block' : 'none' }; }`
+			}
+			styleTag.innerHTML = styleString;
+	    }
+
+	let rad = document.characterSetForm.characterSet;
+	for (let i = 0; i < rad.length; i++) {
+	    rad[i].addEventListener('change', (event) => { 
+	    	changeStyle(event.target.value); 
+	    });
+	}
+</script>
+<div id="content">
 
 <h4>
 	Ju Wen Xian 鞠文嫻 - BING BIAN 病變 Lyrics 歌詞 with Pinyin | 鞠文嫻 病變 歌詞
 </h4>
 
-<!-- 謝謝你曾經讓我悲傷 - thank you for making me sad-->
 <pre>
 	Singer: Ju Wen Xian 鞠文嫻
 	Album: BING BIAN 病變 (病变) - pathological changes
@@ -68,6 +131,8 @@ pre, p {
 	</p>
 	<p class="simplified">
 	</p>
+	<p class="pinyin">
+	</p>
 	<pre class="english">
 	</pre>
 </div>
@@ -78,11 +143,14 @@ pre, p {
 		有天我睡醒看到我的身邊沒有你
 	</p>
 	<p class="simplified">
+		有天我睡醒看到我的身边没有你
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 Yǒu tiān wǒ shuì xǐng kàn dào wǒ de shēnbiān méiyǒu nǐ
 
-有天 - someday - Is it always future tense? Can it mean "There was a day"
+有天 - oneday - any tense, not time specific "There was a day"
 shuì xǐng - wake up
 shēnbiān - at my side
 
@@ -94,6 +162,9 @@ shēnbiān - at my side
 		在我的右邊是你曾經喜歡的玩具
 	</p>
 	<p class="simplified">
+		在我的右边是你曾经喜欢的玩具
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 zài wǒ de yòubiān shì nǐ céngjīng xǐhuān de wánjù
@@ -109,19 +180,23 @@ zài wǒ de yòubiān shì nǐ céngjīng xǐhuān de wánjù
 		可當我站起身來在房間裡尋找你
 	</p>
 	<p class="simplified">
+		可当我站起身来在房间里寻找你
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 kě dāng wǒ zhàn qǐshēn lái zài fángjiān lǐ xúnzhǎo nǐ
 
-clarify these two:
+clarify these two: ?
 可 - can mean "but"
 當 - can mean "when"
 
 站 - stand
-起身 - also "to stand" ?? whole thing means stand up?
+起身 - also "to stand" more ?? whole thing means stand up?
+来
 
 
-尋找 - to search (why not just zhiao?)
+尋找 - to search (why not just zhao?) J- no reason, it happensf
 
 "But when I stood up and tried to find you in my room"
 	</pre>
@@ -131,11 +206,24 @@ clarify these two:
 		留下的只有帶著你味道的一封信
 	</p>
 	<p class="simplified">
+		留下的只有带着你味道的一封信
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 liú xià de zhǐyǒu dàizhe nǐ wèidào de yī fēng xìn
 
+why is 的 here?  - part of the sentence is implied could say 
+留下的东西
+
+can you chain de together infinitely?
+
+白色（的）东西（的）后面的鸟头疼 ? - LOL
+
+
 留 - remain/left behind
+只有 - means only in this case, doesnt always mean "just have"
+
 带着 - with, but only used with intangible objects like smells and thoughts
 味道 - scent/hint of
 一封信 - [#][counting word][letter]
@@ -150,11 +238,16 @@ liú xià de zhǐyǒu dàizhe nǐ wèidào de yī fēng xìn
 		就在昨天還一起看我們的照片
 	</p>
 	<p class="simplified">
+		就在昨天还一起看我们的照片
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 jiù zài zuótiān huán yīqǐ kàn wǒmen de zhàopiàn
 
 is this a normal thing? 就+ 还？
+
+need to clarify jiu + zai + hai?
 
 
 還 - hái / huán - even
@@ -162,7 +255,11 @@ is this a normal thing? 就+ 还？
 
 "We were just looking at our photo yesterday"
 
-or 就在 = "just"? 
+or 就在 = "just"?  - J says "yes"
+
+J- 
+还 here is still
+
 
 then:
 "Just yesterday we were still looking at our photo together."
@@ -170,9 +267,12 @@ then:
 </div>
 <div class="line">
 	<p class="chinese">
-		可現在讓我感覺像爛劇裡的主演
+		可現在讓我感覺像爛	劇裡的主演
 	</p>
 	<p class="simplified">
+		可现在让我感觉像烂	剧里的主演
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 kě xiànzài ràng wǒ gǎnjué xiàng làn jù lǐ de zhǔyǎn
@@ -182,15 +282,18 @@ kě xiànzài ràng wǒ gǎnjué xiàng làn jù lǐ de zhǔyǎn
 像 - resemble, image, likeness 
 (These three = feels like)
 
-爛 - rotten
-劇 (剧) - drama, play, opera
+
+爛 - rotten, kids in taiwan use this as "bad" - J says "It's stupid"
+劇 (剧) - drama, play, opera 
+J - 劇 is not used by itswelf in mainland china, only in taiwan, means "show"
 爛劇 - bad drama
 
 主 - main, primary
 演 - play, act, 
 主演 - starring, act the leading role
 
-"But now I feel like I'm the lead of a bad play"
+"But now I feel like I'm the lead of a bad play" - internet
+"But now I feel like I'm th main actor in a sad movie" - youtube vdeo with lyrics
 	</pre>
 	<!-- 
 For example, 让 rang4 in Simplified is 讓 rang4 in Traditional. If you are a beginner, you might think it looks totally different. However, if you are proficient in Simplified, you should be able to read the character 壤 rang3 which means soil, and is the same in Simplified and Traditional (yes, Simplified was inconsistently simplified). From this you should be able to guess pretty well what 讓 rang4 is because of the pronunciation clue and the right-half being exactly the same.
@@ -220,20 +323,26 @@ examples of the above:
 		為什麼這種事情會發生在我身邊
 	</p>
 	<p class="simplified">
+		为什么这种事情会发生在我身边
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
-wèishéme zhè zhǒng shìqíng huì fāshēng zài wǒ shēnbiān
+wèishéme zhèzhǒng shìqíng huì fāshēng zài wǒ shēnbiān
 
 為什麼 (为什么)
 這（这）- "This".
 
 种 - species，kind
 
+这种 - one word
+
 事 - thing, business, affair, accident, trouble. (a thing that happens)
 情 - situation, (love, feeling)?
-種事 (种事) - thing
+事 (事) - thing (intangible), could be used by itself, completely the same
 
-會 (会) - why is this here? translated as past tense?
+會 (会) - doesn't always mean will or can, can mean "would"
+ - when in a question means would
 
 發生 - occur, happen, take place
 
@@ -248,6 +357,9 @@ wèishéme zhè zhǒng shìqíng huì fāshēng zài wǒ shēnbiān
 		是不是老天沒能看到對你的瘋癲
 	</p>
 	<p class="simplified">
+		是不是老天没能看到对你的疯癫
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 shì bùshì lǎo tiān méi néng kàn dào duì nǐ de fēngdiān
@@ -268,6 +380,9 @@ isnt god able to see (directed at you) crazy
 		還想著 創造你的宇宙
 	</p>
 	<p class="simplified">
+		还想着 创造你的宇宙
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 hái xiǎngzhe chuàngzào nǐ de yǔzhòu
@@ -287,6 +402,9 @@ hái xiǎngzhe chuàngzào nǐ de yǔzhòu
 		但現在 已經被我清空
 	</p>
 	<p class="simplified">
+		但现在 已经被我清空
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 dàn xiànzài yǐjīng bèi wǒ qīngkōng
@@ -306,6 +424,9 @@ dàn xiànzài yǐjīng bèi wǒ qīngkōng
 		你讓我 整個人都冰凍
 	</p>
 	<p class="simplified">
+		你让我 整个人都冰冻
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 nǐ ràng wǒ zhěnggè rén dōu bīngdòng
@@ -322,6 +443,9 @@ nǐ ràng wǒ zhěnggè rén dōu bīngdòng
 		還怎麼 再次為你心動
 	</p>
 	<p class="simplified">
+		还怎么 再次为你心动
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 hái zěnme zàicì wèi nǐ xīndòng
@@ -338,6 +462,9 @@ hái zěnme zàicì wèi nǐ xīndòng
 		Wake up me 不是你的意願
 	</p>
 	<p class="simplified">
+		Wake up me 不是你的意愿
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 Wake up me bùshì nǐ de yìyuàn
@@ -352,6 +479,9 @@ Wake up me bùshì nǐ de yìyuàn
 		離開我 開始新的起點
 	</p>
 	<p class="simplified">
+		离开我 开始新的起点
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 líkāi wǒ kāishǐ xīn de qǐdiǎn
@@ -373,6 +503,9 @@ to leave this world
 		可能我 還會對你貪戀
 	</p>
 	<p class="simplified">
+		可能我 还会对你贪恋
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 kěnéng wǒ hái huì duì nǐ tānliàn
@@ -389,26 +522,38 @@ kěnéng wǒ hái huì duì nǐ tānliàn
 		誰讓你 曾經讓我瘋癲
 	</p>
 	<p class="simplified">
+		谁让你 曾经让我疯癫
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 shuí ràng nǐ céngjīng ràng wǒ fēngdiān
-誰讓你 (谁让你) - who makes you
+誰讓你 (谁让你) - J - theres no translation, it kind of implies blame on the person in context
 
-"Whoever made you, [once? already?] made me crazy"
+
+
+" it's because you made me crazy"
+
+"its because you" is coming from 谁让你
 	</pre>
 </div>
 <br />
 <div class="line">
 	<p class="chinese">
-		瘋癲 那也是過去的畫面
+		瘋癲 那也是過去的畫面 
 	</p>
 	<p class="simplified">
+		疯癫 那也是过去的画面
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 fēngdiān nà yěshì guòqù de huàmiàn
-Why "过去" instead of "过" ? 
+Why "过去" instead of "过" ?
+过 - confsing, depends on what its with
 
-過去 (过去) - [past tense]  
+
+過去 (过去) - the past 
 畫面 (画面) - scene, tableau, image
 
 "Madness, that's [also?] the image of the past."
@@ -420,9 +565,13 @@ Why "过去" instead of "过" ?
 		看往後的幾天 我猜你也不會出現
 	</p>
 	<p class="simplified">
+		看往后的几天 我猜你也不会出现
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 kàn wǎng hòu de jǐ tiān wǒ cāi nǐ yě bù huì chūxiàn
+J - this is wrong "IT's just so broken like wtf"
 
 往後 (往后) -  from here on, in the future
 猜 - guess
@@ -439,11 +588,12 @@ Not sure why "Looking back at the days"?
 		我回想這幾年 就像是要命的病變
 	</p>
 	<p class="simplified">
+		我回想这几年 就像是要命的病变
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 wǒ huíxiǎng zhè jǐ nián jiù xiàng shì yàomìng de bìngbiàn
-
-我回想这几年 就像是要命的病变
 
 回想 - recall, think back to
 几年 - some years
@@ -460,6 +610,9 @@ wǒ huíxiǎng zhè jǐ nián jiù xiàng shì yàomìng de bìngbiàn
 		你可能聽不見 來自他對你的掛念
 	</p>
 	<p class="simplified">
+		你可能听不见 来自他对你的挂念
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 		你可能听不见 来自他对你的挂念
@@ -486,6 +639,9 @@ nǐ kěnéng tīng bùjiàn láizì tā duì nǐ de guàniàn
 		可能有點累 覺得對不對
 	</p>
 	<p class="simplified">
+		可能有点累 觉得对不对
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 可能有点累 觉得对不对
@@ -502,6 +658,8 @@ kěnéng yǒudiǎn lèi juédé duì bùduì
 	<p class="simplified">
 		这是第几次 在为你宿醉
 	</p>
+	<p class="pinyin">
+	</p>
 	<pre class="english">
 zhè shì dì jǐ cì zài wèi nǐ sù zuì
 
@@ -513,6 +671,7 @@ zhè shì dì jǐ cì zài wèi nǐ sù zuì
 
 Jane: Lit. "This is what number of hangover because of you"
 but would probably say "How many times have I been hungover because of you?"
+
 	</pre>
 </div>
 <div class="line">
@@ -521,6 +680,8 @@ but would probably say "How many times have I been hungover because of you?"
 	</p>
 	<p class="simplified">
 		没了我肩膀 你在谁身旁
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 méiliǎo wǒ jiānbǎng nǐ zài shuí shēn páng
@@ -540,6 +701,8 @@ méiliǎo wǒ jiānbǎng nǐ zài shuí shēn páng
 	<p class="simplified">
 		买的礼物都变成了灰
 	</p>
+	<p class="pinyin">
+	</p>
 	<pre class="english">
 mǎi de lǐwù dōu biànchéngle huī
 
@@ -558,6 +721,8 @@ mǎi de lǐwù dōu biànchéngle huī
 	<p class="simplified">
 		曾经我多想 把你变漂亮
 	</p>
+	<p class="pinyin">
+	</p>
 	<pre class="english">
 céngjīng wǒ duō xiǎng bǎ nǐ biàn piàoliang
 
@@ -567,8 +732,11 @@ céngjīng wǒ duō xiǎng bǎ nǐ biàn piàoliang
 
 Questions:
 can 曾经 always be "once"? (I once wanted...)
+
 does 多 apply to xiang here or "make pretty"?
 	"I wanted more to make you pretty" vs "I wanted to make you more pretty"
+
+	J - neither，it's shortened version of 多么 "How much" as an exclamation - you dont know how much I want blah blHB LAH
 	</pre>
 </div>
 <div class="line">
@@ -578,11 +746,15 @@ does 多 apply to xiang here or "make pretty"?
 	<p class="simplified">
 		看着别人羡慕你的模样 <!-- this actually got harder in simplified -_- -->
 	</p>
+	<p class="pinyin">
+	</p>
 	<pre class="english">
 kànzhe biérén xiànmù nǐ de múyàng
 
 着 - fk this ones complicated. Copy and Pasting.
 	zhe	aspect particle indicating action in progress
+	J - counter example - 见着 - watching - 见 - look
+	J - 看着 -watching - 看 look 
 	zhāo	(chess) move; trick; all right!; (dialect) to add
 	zháo	to touch; to come in contact with; to feel; to be affected by; to catch fire; to burn; (coll.) to fall asleep; (after a verb) hitting the mark; succeeding in
 	zhuó	to wear (clothes); to contact; to use; to apply
@@ -591,7 +763,7 @@ kànzhe biérén xiànmù nǐ de múyàng
 羡慕 - envy, admire
 模样 - appearance (yang has sheep)
 
-"Looking at others envying your looks"
+"Watching at others envying your looks"
 	</pre>
 </div>
 <div class="line">
@@ -601,6 +773,8 @@ kànzhe biérén xiànmù nǐ de múyàng
 	<p class="simplified">
 		没关系 有小熊陪着你看月亮
 	</p>
+	<p class="pinyin">
+	</p>
 	<pre class="english">
 méiguānxì yǒu xiǎoxióng péizhe nǐ kàn yuèliàng
 
@@ -608,7 +782,7 @@ méiguānxì yǒu xiǎoxióng péizhe nǐ kàn yuèliàng
 陪 - to accompany; to keep sb company; to assist; 
 月亮 - moon (why not just 月?)
 
-"Thats okay, with teddy accompany you to look at the moon"
+"Thats okay, with teddy to accompany you to look at the moon"
 
 	</pre>
 </div>
@@ -619,6 +793,8 @@ méiguānxì yǒu xiǎoxióng péizhe nǐ kàn yuèliàng
 	</p>
 	<p class="simplified">
 		我已经看到跟你断电的过程
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 wǒ yǐjīng kàn dào gēn nǐ duàn diàn de guòchéng
@@ -631,7 +807,7 @@ wǒ yǐjīng kàn dào gēn nǐ duàn diàn de guòchéng
 "I saw the process where we lost our spark"
 	</pre>
 <!-- 
-This is a really good translation. need to chunk the sentence though 
+This seems like a really good translation. need to chunk the sentence though 
 "dào gēn nǐ duàn diàn" is one chunk, "lose our spark"
 could also be
 "I watched closely as we lost our spark"
@@ -643,6 +819,8 @@ could also be
 	</p>
 	<p class="simplified">
 		但我假装看不见
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 dàn wǒ jiǎzhuāng kàn bùjiàn
@@ -659,6 +837,8 @@ dàn wǒ jiǎzhuāng kàn bùjiàn
 	</p>
 	<p class="simplified">
 		是不是要我变得像个厉鬼
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 shì bùshì yào wǒ biàn dé xiàng gè lìguǐ
@@ -680,6 +860,8 @@ shì bùshì yào wǒ biàn dé xiàng gè lìguǐ
 	<p class="simplified">
 		才能进入你的世界
 	</p>
+	<p class="pinyin">
+	</p>
 	<pre class="english">
 cáinéng jìnrù nǐ de shìjiè
 
@@ -700,6 +882,8 @@ cáinéng jìnrù nǐ de shìjiè
 	<p class="simplified">
 		为什么不说再见 我猜你
 	</p>
+	<p class="pinyin">
+	</p>
 	<pre class="english">
 wèishéme bù shuō zàijiàn wǒ cāi nǐ
 
@@ -712,6 +896,8 @@ wèishéme bù shuō zàijiàn wǒ cāi nǐ
 	</p>
 	<p class="simplified">
 		应该是不小心的忘记
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 yīnggāi shì bù xiǎoxīn de wàngjì
@@ -730,6 +916,8 @@ yīnggāi shì bù xiǎoxīn de wàngjì
 	</p>
 	<p class="simplified">
 		都无所谓也有点累
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 dōu wúsuǒwèi yě yǒudiǎn lèi
@@ -752,6 +940,8 @@ Hope that helps!
 	<p class="simplified">
 		也可以开始新的记忆
 	</p>
+	<p class="pinyin">
+	</p>
 	<pre class="english">
 yě kěyǐ kāishǐ xīn de jìyì
 
@@ -766,9 +956,16 @@ yě kěyǐ kāishǐ xīn de jìyì
 		有天我睡醒看到我的身邊沒有你
 	</p>
 	<p class="simplified">
+		有天我睡醒看到我的身边没有你
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
-yǒu tiān wǒ shuì xǐng kàn dào wǒ de shēnbiān méiyǒu nǐ
+Yǒu tiān wǒ shuì xǐng kàn dào wǒ de shēnbiān méiyǒu nǐ
+
+有天 - oneday - any tense, not time specific "There was a day"
+shuì xǐng - wake up
+shēnbiān - at my side
 
 "Woke up one day without you next to me"
 	</pre>
@@ -778,9 +975,15 @@ yǒu tiān wǒ shuì xǐng kàn dào wǒ de shēnbiān méiyǒu nǐ
 		在我的右邊是你曾經喜歡的玩具
 	</p>
 	<p class="simplified">
+		在我的右边是你曾经喜欢的玩具
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 zài wǒ de yòubiān shì nǐ céngjīng xǐhuān de wánjù
+
+曾經 - once/at some point in the past
+玩具 - toy/plaything/bauble/knick-knack (remember 玩 = play)
 
 "On my right was once your favourite toy"
 	</pre>
@@ -790,9 +993,23 @@ zài wǒ de yòubiān shì nǐ céngjīng xǐhuān de wánjù
 		可當我站起身來在房間裡尋找你
 	</p>
 	<p class="simplified">
+		可当我站起身来在房间里寻找你
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 kě dāng wǒ zhàn qǐshēn lái zài fángjiān lǐ xúnzhǎo nǐ
+
+clarify these two: ?
+可 - can mean "but"
+當 - can mean "when"
+
+站 - stand
+起身 - also "to stand" more ?? whole thing means stand up?
+来
+
+
+尋找 - to search (why not just zhao?) J- no reason, it happensf
 
 "But when I stood up and tried to find you in my room"
 	</pre>
@@ -802,61 +1019,172 @@ kě dāng wǒ zhàn qǐshēn lái zài fángjiān lǐ xúnzhǎo nǐ
 		留下的只有帶著你味道的一封信
 	</p>
 	<p class="simplified">
+		留下的只有带着你味道的一封信
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 liú xià de zhǐyǒu dàizhe nǐ wèidào de yī fēng xìn
+
+why is 的 here?  - part of the sentence is implied could say 
+留下的东西
+
+can you chain de together infinitely?
+
+白色（的）东西（的）后面的鸟头疼 ? - LOL
+
+
+留 - remain/left behind
+只有 - means only in this case, doesnt always mean "just have"
+
+带着 - with, but only used with intangible objects like smells and thoughts
+味道 - scent/hint of
+一封信 - [#][counting word][letter]
+	封 - Individual measure for things that can be sealed
 
 "There's only a letter left with your scent"
 	</pre>
 </div>
 <br />
-
 <div class="line">
 	<p class="chinese">
 		就在昨天還一起看我們的照片
 	</p>
 	<p class="simplified">
+		就在昨天还一起看我们的照片
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 jiù zài zuótiān huán yīqǐ kàn wǒmen de zhàopiàn
 
+is this a normal thing? 就+ 还？
+
+need to clarify jiu + zai + hai?
+
+
+還 - hái / huán - even
+一起 - altogether
+
 "We were just looking at our photo yesterday"
+
+or 就在 = "just"?  - J says "yes"
+
+J- 
+还 here is still
+
+
+then:
+"Just yesterday we were still looking at our photo together."
 	</pre>
 </div>
 <div class="line">
 	<p class="chinese">
-		可現在讓我感覺像爛劇裡的主演
+		可現在讓我感覺像爛	劇裡的主演
 	</p>
 	<p class="simplified">
+		可现在让我感觉像烂	剧里的主演
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 kě xiànzài ràng wǒ gǎnjué xiàng làn jù lǐ de zhǔyǎn
 
-"But now I feel like I'm the lead of a bad play"
+讓 (让) - let, make, allow, etc. (complicated word) (让  in simplified)
+感覺 (感觉)- feel, impression
+像 - resemble, image, likeness 
+(These three = feels like)
+
+
+爛 - rotten, kids in taiwan use this as "bad" - J says "It's stupid"
+劇 (剧) - drama, play, opera 
+J - 劇 is not used by itswelf in mainland china, only in taiwan, means "show"
+爛劇 - bad drama
+
+主 - main, primary
+演 - play, act, 
+主演 - starring, act the leading role
+
+"But now I feel like I'm the lead of a bad play" - internet
+"But now I feel like I'm th main actor in a sad movie" - youtube vdeo with lyrics
 	</pre>
+	<!-- 
+For example, 让 rang4 in Simplified is 讓 rang4 in Traditional. If you are a beginner, you might think it looks totally different. However, if you are proficient in Simplified, you should be able to read the character 壤 rang3 which means soil, and is the same in Simplified and Traditional (yes, Simplified was inconsistently simplified). From this you should be able to guess pretty well what 讓 rang4 is because of the pronunciation clue and the right-half being exactly the same.
+	-->
+	<!-- 
+觉得 is a subjective way of expressing your feeling. For example, 我觉得他是一个好人。You have your own judgement on something after knowing some bit of him.
+
+感觉 is an objective way of expressing your feeling. For example, 我感觉他是一个好人。You are guessing without knowing him whether he's a good person or not.
+
+Also 觉得 can only be a verb. it is often translated into FEEL/THINK. 感觉 can be both verb and noun.
+
+Verb: It can be translated into FEEL.
+
+Noun: It can be translated into FEELING/REACTION/ATTRACTION.
+
+examples of the above:
+
+1, FEELING: 面试后的感觉怎么样？
+
+2, REACTION: When you have a stomachache, the doctor may press your stomach and ask you “这里有感觉吗？"
+
+3, ATTRACTION: When lovers talk about how they fell in love they may say “我和她第一次见面就很有感觉" meaning "We drew each other's attraction when we first met".
+	-->
 </div>
 <div class="line">
 	<p class="chinese">
 		為什麼這種事情會發生在我身邊
 	</p>
 	<p class="simplified">
+		为什么这种事情会发生在我身边
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
-wèishéme zhè zhǒng shìqíng huì fāshēng zài wǒ shēnbiān
+wèishéme zhèzhǒng shìqíng huì fāshēng zài wǒ shēnbiān
 
-"Why did this happen to me"
+為什麼 (为什么)
+這（这）- "This".
+
+种 - species，kind
+
+这种 - one word
+
+事 - thing, business, affair, accident, trouble. (a thing that happens)
+情 - situation, (love, feeling)?
+事 (事) - thing (intangible), could be used by itself, completely the same
+
+會 (会) - doesn't always mean will or can, can mean "would"
+ - when in a question means would
+
+發生 - occur, happen, take place
+
+
+"Why did this happen to me" - from the site, too specific though.
+"Why does this kind of thing happen to me"
 	</pre>
+	<!-- 不会发生的  - impossible (lit. "will not happen" 的 ...)-->
 </div>
 <div class="line">
 	<p class="chinese">
-是不是老天沒能看到對你的瘋癲
+		是不是老天沒能看到對你的瘋癲
 	</p>
 	<p class="simplified">
+		是不是老天没能看到对你的疯癫
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 shì bùshì lǎo tiān méi néng kàn dào duì nǐ de fēngdiān
 
-"Didn't god saw my craziness for you"
+老天 - god
+到對你 - directed at you
+瘋癲 (疯癫) - insane
+
+isnt god able to see (directed at you) crazy
+
+"Didn't god saw my craziness for you" - from website
+"Can't god see I'm crazy for you"
 	</pre>
 </div>
 <br />
@@ -867,6 +1195,8 @@ shì bùshì lǎo tiān méi néng kàn dào duì nǐ de fēngdiān
 	</p>
 	<p class="simplified">
 		我不能够停止啊
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 wǒ bù nénggòu tíng zhǐ a
@@ -892,6 +1222,8 @@ a	modal particle ending sentence, showing affirmation, approval, or consent
 	<p class="simplified">
 		这些年我对你的疯癫
 	</p>
+	<p class="pinyin">
+	</p>
 	<pre class="english">
 zhèxiē nián wǒ duì nǐ de fēngdiān
 
@@ -904,6 +1236,8 @@ zhèxiē nián wǒ duì nǐ de fēngdiān
 	</p>
 	<p class="simplified">
 		还会戴上那条围巾吗
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 hái huì dài shàng nà tiáo wéijīn ma
@@ -923,6 +1257,8 @@ hái huì dài shàng nà tiáo wéijīn ma
 	<p class="simplified">
 		在每一个寒风刺骨的冬天
 	</p>
+	<p class="pinyin">
+	</p>
 	<pre class="english">
 zài měi yīgè hánfēng cìgǔ de dōngtiān
 
@@ -940,6 +1276,8 @@ zài měi yīgè hánfēng cìgǔ de dōngtiān
 	<p class="simplified">
 		还有每次送你在回家的路上
 	</p>
+	<p class="pinyin">
+	</p>
 	<pre class="english">
 hái yǒu měi cì sòng nǐ zài huí jiā de lùshàng
 
@@ -955,6 +1293,8 @@ hái yǒu měi cì sòng nǐ zài huí jiā de lùshàng
 	</p>
 	<p class="simplified">
 		不经意间触碰到你的手
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 bùjīngyì jiān chù pèng dào nǐ de shǒu
@@ -982,6 +1322,8 @@ bùjīngyì jiān chù pèng dào nǐ de shǒu
 	<p class="simplified">
 		你穿裙子眨眼睛 望着我
 	</p>
+	<p class="pinyin">
+	</p>
 	<pre class="english">
 nǐ chuān qúnzi zhǎ yǎnjīng wàngzhe wǒ
 
@@ -1004,6 +1346,8 @@ nǐ chuān qúnzi zhǎ yǎnjīng wàngzhe wǒ
 	<p class="simplified">
 		那些让我心动的瞬间
 	</p>
+	<p class="pinyin">
+	</p>
 	<pre class="english">
 nàxiē ràng wǒ xīndòng de shùnjiān
 
@@ -1022,6 +1366,8 @@ nàxiē ràng wǒ xīndòng de shùnjiān
 	<p class="simplified">
 		那条十字路口 始终有你身上的气味
 	</p>
+	<p class="pinyin">
+	</p>
 	<pre class="english">
 nà tiáo shízìlù kǒu shǐzhōng yǒu nǐ shēnshang de qìwèi
 
@@ -1038,6 +1384,8 @@ nà tiáo shízìlù kǒu shǐzhōng yǒu nǐ shēnshang de qìwèi
 		車水馬龍過後的路燈下的身影 又會是誰
 	</p>
 	<p class="simplified">
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 chēshuǐmǎlóng guòhòu de lùdēng xià de shēnyǐng yòu huì shì shuí
@@ -1057,6 +1405,8 @@ chēshuǐmǎlóng guòhòu de lùdēng xià de shēnyǐng yòu huì shì shuí
 	</p>
 	<p class="simplified">
 		他说我真的 喜欢你但是每次欲言又闭嘴
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 tā shuō wǒ zhēn de xǐhuān nǐ dànshì měi cì yù yán yòu bì zuǐ
@@ -1086,6 +1436,8 @@ no quotes makes it difficult
 	<p class="simplified">
 		那时荒唐的男孩 又浑浊了几岁
 	</p>
+	<p class="pinyin">
+	</p>
 	<pre class="english">
 nà shí huāngtáng de nánhái yòu húnzhuóle jǐ suì
 
@@ -1110,9 +1462,16 @@ does "muddy" mean something else here? like dirty in engish?
 		有天我睡醒看到我的身邊沒有你
 	</p>
 	<p class="simplified">
+		有天我睡醒看到我的身边没有你
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
-yǒu tiān wǒ shuì xǐng kàn dào wǒ de shēnbiān méiyǒu nǐ
+Yǒu tiān wǒ shuì xǐng kàn dào wǒ de shēnbiān méiyǒu nǐ
+
+有天 - oneday - any tense, not time specific "There was a day"
+shuì xǐng - wake up
+shēnbiān - at my side
 
 "Woke up one day without you next to me"
 	</pre>
@@ -1122,9 +1481,15 @@ yǒu tiān wǒ shuì xǐng kàn dào wǒ de shēnbiān méiyǒu nǐ
 		在我的右邊是你曾經喜歡的玩具
 	</p>
 	<p class="simplified">
+		在我的右边是你曾经喜欢的玩具
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 zài wǒ de yòubiān shì nǐ céngjīng xǐhuān de wánjù
+
+曾經 - once/at some point in the past
+玩具 - toy/plaything/bauble/knick-knack (remember 玩 = play)
 
 "On my right was once your favourite toy"
 	</pre>
@@ -1134,9 +1499,23 @@ zài wǒ de yòubiān shì nǐ céngjīng xǐhuān de wánjù
 		可當我站起身來在房間裡尋找你
 	</p>
 	<p class="simplified">
+		可当我站起身来在房间里寻找你
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 kě dāng wǒ zhàn qǐshēn lái zài fángjiān lǐ xúnzhǎo nǐ
+
+clarify these two: ?
+可 - can mean "but"
+當 - can mean "when"
+
+站 - stand
+起身 - also "to stand" more ?? whole thing means stand up?
+来
+
+
+尋找 - to search (why not just zhao?) J- no reason, it happensf
 
 "But when I stood up and tried to find you in my room"
 	</pre>
@@ -1146,62 +1525,174 @@ kě dāng wǒ zhàn qǐshēn lái zài fángjiān lǐ xúnzhǎo nǐ
 		留下的只有帶著你味道的一封信
 	</p>
 	<p class="simplified">
+		留下的只有带着你味道的一封信
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 liú xià de zhǐyǒu dàizhe nǐ wèidào de yī fēng xìn
+
+why is 的 here?  - part of the sentence is implied could say 
+留下的东西
+
+can you chain de together infinitely?
+
+白色（的）东西（的）后面的鸟头疼 ? - LOL
+
+
+留 - remain/left behind
+只有 - means only in this case, doesnt always mean "just have"
+
+带着 - with, but only used with intangible objects like smells and thoughts
+味道 - scent/hint of
+一封信 - [#][counting word][letter]
+	封 - Individual measure for things that can be sealed
 
 "There's only a letter left with your scent"
 	</pre>
 </div>
 <br />
-
 <div class="line">
 	<p class="chinese">
 		就在昨天還一起看我們的照片
 	</p>
 	<p class="simplified">
+		就在昨天还一起看我们的照片
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 jiù zài zuótiān huán yīqǐ kàn wǒmen de zhàopiàn
 
+is this a normal thing? 就+ 还？
+
+need to clarify jiu + zai + hai?
+
+
+還 - hái / huán - even
+一起 - altogether
+
 "We were just looking at our photo yesterday"
+
+or 就在 = "just"?  - J says "yes"
+
+J- 
+还 here is still
+
+
+then:
+"Just yesterday we were still looking at our photo together."
 	</pre>
 </div>
 <div class="line">
 	<p class="chinese">
-		可現在讓我感覺像爛劇裡的主演
+		可現在讓我感覺像爛	劇裡的主演
 	</p>
 	<p class="simplified">
+		可现在让我感觉像烂	剧里的主演
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 kě xiànzài ràng wǒ gǎnjué xiàng làn jù lǐ de zhǔyǎn
 
-"But now I feel like I'm the lead of a bad play"
+讓 (让) - let, make, allow, etc. (complicated word) (让  in simplified)
+感覺 (感觉)- feel, impression
+像 - resemble, image, likeness 
+(These three = feels like)
+
+
+爛 - rotten, kids in taiwan use this as "bad" - J says "It's stupid"
+劇 (剧) - drama, play, opera 
+J - 劇 is not used by itswelf in mainland china, only in taiwan, means "show"
+爛劇 - bad drama
+
+主 - main, primary
+演 - play, act, 
+主演 - starring, act the leading role
+
+"But now I feel like I'm the lead of a bad play" - internet
+"But now I feel like I'm th main actor in a sad movie" - youtube vdeo with lyrics
 	</pre>
+	<!-- 
+For example, 让 rang4 in Simplified is 讓 rang4 in Traditional. If you are a beginner, you might think it looks totally different. However, if you are proficient in Simplified, you should be able to read the character 壤 rang3 which means soil, and is the same in Simplified and Traditional (yes, Simplified was inconsistently simplified). From this you should be able to guess pretty well what 讓 rang4 is because of the pronunciation clue and the right-half being exactly the same.
+	-->
+	<!-- 
+觉得 is a subjective way of expressing your feeling. For example, 我觉得他是一个好人。You have your own judgement on something after knowing some bit of him.
+
+感觉 is an objective way of expressing your feeling. For example, 我感觉他是一个好人。You are guessing without knowing him whether he's a good person or not.
+
+Also 觉得 can only be a verb. it is often translated into FEEL/THINK. 感觉 can be both verb and noun.
+
+Verb: It can be translated into FEEL.
+
+Noun: It can be translated into FEELING/REACTION/ATTRACTION.
+
+examples of the above:
+
+1, FEELING: 面试后的感觉怎么样？
+
+2, REACTION: When you have a stomachache, the doctor may press your stomach and ask you “这里有感觉吗？"
+
+3, ATTRACTION: When lovers talk about how they fell in love they may say “我和她第一次见面就很有感觉" meaning "We drew each other's attraction when we first met".
+	-->
 </div>
 <div class="line">
 	<p class="chinese">
 		為什麼這種事情會發生在我身邊
 	</p>
 	<p class="simplified">
+		为什么这种事情会发生在我身边
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
-wèishéme zhè zhǒng shìqíng huì fāshēng zài wǒ shēnbiān
+wèishéme zhèzhǒng shìqíng huì fāshēng zài wǒ shēnbiān
 
-"Why did this happen to me"
+為什麼 (为什么)
+這（这）- "This".
+
+种 - species，kind
+
+这种 - one word
+
+事 - thing, business, affair, accident, trouble. (a thing that happens)
+情 - situation, (love, feeling)?
+事 (事) - thing (intangible), could be used by itself, completely the same
+
+會 (会) - doesn't always mean will or can, can mean "would"
+ - when in a question means would
+
+發生 - occur, happen, take place
+
+
+"Why did this happen to me" - from the site, too specific though.
+"Why does this kind of thing happen to me"
 	</pre>
+	<!-- 不会发生的  - impossible (lit. "will not happen" 的 ...)-->
 </div>
 <div class="line">
 	<p class="chinese">
 		是不是老天沒能看到對你的瘋癲
 	</p>
 	<p class="simplified">
+		是不是老天没能看到对你的疯癫
+	</p>
+	<p class="pinyin">
 	</p>
 	<pre class="english">
 shì bùshì lǎo tiān méi néng kàn dào duì nǐ de fēngdiān
 
-"Didn't god saw my craziness for you"
+老天 - god
+到對你 - directed at you
+瘋癲 (疯癫) - insane
+
+isnt god able to see (directed at you) crazy
+
+"Didn't god saw my craziness for you" - from website
+"Can't god see I'm crazy for you"
 	</pre>
 </div>
 
 
+</div>

@@ -1,0 +1,558 @@
+
+<style type="text/css">
+	iframe {
+		width: 100%;
+	}
+	body {
+		background-color: #222;
+		color: #EEE;
+	}
+	#content {
+		padding: 0 10%;
+	}
+	.english {
+		display: none;
+		position: absolute;
+		left: 2em;
+		bottom: 2em;
+		padding: 1em;
+		background: #333;
+		color: #EEE;
+		border: 1px black solid;
+		border-radius: 10px;
+		z-index: 10;
+		font-size: 0.75em;
+		max-width: 80%;    
+		white-space: pre-wrap;
+	}
+
+	.chinese:hover + p + p + .english, 
+	.simplified:hover + p + .english,
+	.pinyin:hover + .english,
+	.english:hover
+	{
+		display: block;
+	}
+
+	.chinese,
+	.simplified,
+	.pinyin {
+		font: Roboto, Arial, sans-serif;
+	}
+
+	.line {
+		font-size: 1.5em;
+		display: block;
+		position: relative;
+	}
+	pre, p {
+		margin: 0;
+	}
+	#characterSetForm {
+		text-align: center;
+	}
+</style>
+
+<style type="text/css" id="mutable-style">
+	.chinese {
+		display: inline-block;
+	}
+	.simplified {
+		display: none;
+	}
+	.pinyin {
+		display: none;
+	}
+</style>
+
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed//iTIKzLyQDS0' frameborder='0' allowfullscreen></iframe></div>
+
+<form name="characterSetForm" id="characterSetForm">
+	<input type="radio" name="characterSet" value="chinese" checked="true">Traditional
+	<input type="radio" name="characterSet" value="simplified">Simplified
+	<input type="radio" name="characterSet" value="pinyin">Pinyin
+</form>
+<script type="text/javascript">
+	var supportedSets = ['chinese', 'simplified', 'pinyin']
+	var styleTag = document.getElementById('mutable-style');
+
+	let changeStyle = function(characterSet) {
+	        let styleString = '';
+			for (let i = 0; i < supportedSets.length; i++) {
+				styleString += `.${ supportedSets[i] } { display: ${ characterSet === supportedSets[i] ? 'inline-block' : 'none' }; }`
+			}
+			styleTag.innerHTML = styleString;
+	    }
+
+	let rad = document.characterSetForm.characterSet;
+	for (let i = 0; i < rad.length; i++) {
+	    rad[i].addEventListener('change', (event) => { 
+	    	changeStyle(event.target.value); 
+	    });
+	}
+</script>
+
+
+<!--
+<div class="line">
+	<p class="chinese">
+	</p>
+	<p class="simplified">
+	</p>
+	<p class="pinyin">
+	</p>
+	<pre class="english">
+	</pre>
+</div>
+
+
+-->
+<div id="content">
+	<h4>
+	謝謝你曾經讓我悲傷 - 原子邦妮 Astro Bunny 
+</h4>
+
+<br />
+<div class="line">
+	<p class="chinese">
+		一顆星孤單的照亮起風的海洋	
+	</p>
+	<p class="simplified">
+		一颗星孤单的照亮起风的海洋
+	</p>
+	<p class="pinyin">
+		yī kē xīng gū dān de zhào liàng qǐ fēng de hǎi yáng
+	</p>
+	<pre class="english">
+一	yī	one; 1; single; a (article); as soon as; entire; whole; all; throughout; "one" radical in Chinese characters (Kangxi radical 1); also pr. [yao1] for greater clarity when spelling out numbers digit by digit
+
+颗	kē	classifier for small spheres, pearls, corn grains, teeth, hearts, satellites etc
+
+星	xīng	star; heavenly body; satellite; small amount
+
+孤单	gū dān	lone; lonely; loneliness
+
+照亮	zhào liàng	to illuminate; to light up; lighting
+
+起	qǐ	to rise; to raise; to get up; to set out; to start; to appear; to launch; to initiate (action); to draft; to establish; to get (from a depot or counter); verb suffix, to start; (before place or time) starting from; classifier for occurrences or unpredictable events: case, instance; classifier for groups: batch, group
+
+风	fēng	wind; news; style; custom; manner; CL:陣|阵[zhen4],絲|丝[si1]
+
+海洋	hǎi yáng	ocean; CL:個|个[ge4]
+
+gt: "A star alone illuminates the windy ocean"
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		兩顆星遙望卻間隔恆久的時光
+	</p>
+	<p class="simplified">
+		两颗星遥望却间隔恒久的时光
+	</p>
+	<p class="pinyin">
+		liǎng kē xīng yáo wàng què jiān gé héng jiǔ de shí guāng
+	</p>
+	<pre class="english">
+遥望	yáo wàng	to look into the distance
+
+却	què	old variant of 卻|却[que4]
+què	but; yet; however; while; to go back; to decline; to retreat; nevertheless; even though
+
+间隔	jiàn gé	compartment; gap; interval; to divide
+
+恒久	héng jiǔ	constant; persistent; long-lasting; eternal
+
+gt: "Two stars look at each other but have a long time"
+Two stars gaze at each other from a distance for so long ? 
+	</pre>
+</div>
+
+<br />
+
+<div class="line">
+	<p class="chinese">
+		我追得匆忙
+	</p>
+	<p class="simplified">
+		我追得匆忙
+	</p>
+	<p class="pinyin">
+		wǒ zhuī dé cōng máng
+	</p>
+	<pre class="english">
+追	zhuī	to chase after; to seek; to do one's utmost to seek or procure sth; to recall
+duī	to sculpt; to carve; musical instrument (old)
+
+匆忙	cōng máng	hasty; hurried
+
+gt: "I am in a hurry"
+I rush after (it, you?)
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我折斷了翅膀
+	</p>
+	<p class="simplified">
+		我折断了翅膀
+	</p>
+	<p class="pinyin">
+		wǒ zhé duàn le chì bǎng
+	</p>
+	<pre class="english">
+折	shé	to break (e.g. stick or bone); a loss
+zhē	to turn sth over; to turn upside down; to tip sth out (of a container)
+zhé	to break; to fracture; to snap; to suffer loss; to bend; to twist; to turn; to change direction; convinced; to convert into (currency); discount; rebate; tenth (in price); classifier for theatrical scenes; to fold; accounts book
+zhé	variant of 折[zhe2]; to fold
+
+折断	zhé duàn	to snap sth off; to break
+
+翅膀	chì bǎng	wing; CL:個|个[ge4],對|对[dui4]
+
+gt: "I broke my wings"
+	</pre>
+</div> 
+<div class="line">
+	<p class="chinese">
+		只為了到有你的遠方	
+	</p>
+	<p class="simplified">
+		只为了到有你的远方
+	</p>
+	<p class="pinyin">
+		zhǐ wèi le dào yǒu nǐ de yuǎn fāng
+	</p>
+	<pre class="english">
+只	zhǐ	only; merely; just; but
+zhī	classifier for birds and certain animals, one of a pair, some utensils, vessels etc
+zhǐ	but; only
+zhǐ	grain that has begun to ripen; variant of 衹|只[zhi3]
+zhǐ	variant of 祇|只[zhi3]
+
+为了	wèi le	in order to; for the purpose of; so as to
+
+到	dào	to (a place); until (a time); up to; to go; to arrive; (verb complement denoting completion or result of an action)
+
+有	yǒu	to have; there is; there are; to exist; to be
+
+你的	nǐ de	your; yours
+
+远方	yuǎn fāng	far away; a distant location
+
+gt: "Just to have your distance" - wtf
+"Just to reach you"
+
+why is 有 here?
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		燃盡了月光
+	</p>
+	<p class="simplified">
+		燃尽了月光
+	</p>
+	<p class="pinyin">
+		rán jǐn le yuè guāng
+	</p>
+	<pre class="english">
+燃	rán	to burn; to ignite; to light; fig. to spark off (hopes); to start (debate); to raise (hopes)
+
+尽	jìn	to use up; to exhaust; to end; to finish; to the utmost; exhausted; finished; to the limit (of sth); all; entirely
+jǐn	to the greatest extent; (when used before a noun of location) furthest or extreme; to be within the limits of; to give priority to
+
+
+月光	yuè guāng	moonlight
+
+gt: "Burned out the moonlight"
+
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		像落葉般飄蕩
+	</p>
+	<p class="simplified">
+		像落叶般飘荡
+	</p>
+	<p class="pinyin">
+		xiàng luò yè bān piāo dàng
+	</p>
+	<pre class="english">
+像	xiàng	to resemble; to be like; to look as if; such as; appearance; image; portrait; image under a mapping (math.)
+
+落叶	luò yè	dead leaves; to lose leaves (of plants); deciduous
+
+how does the word for death work? Is it different for eac object? what is the word?
+
+般	bān	sort; kind; class; way; manner
+pán	see 般樂|般乐[pan2 le4]
+
+飘荡	piāo dàng	to drift; to wave; to float on the waves; to flutter in the wind
+
+gt: "Drifting like fallen leaves"
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		你怎麼還不給我方向
+	</p>
+	<p class="simplified">
+		你怎么还不给我方向
+	</p>
+	<p class="pinyin">
+		nǐ zěn me hái bù gěi wǒ fāng xiàng
+	</p>
+	<pre class="english">
+How can you still not give me direction?
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		傷夠了嗎
+	</p>
+	<p class="simplified">
+		伤够了吗
+	</p>
+	<p class="pinyin">
+		shāng gòu le ma
+	</p>
+	<pre class="english">
+伤	shāng	to injure; injury; wound
+够	gòu	enough (sufficient); enough (too much); (coll.) (before adj.) really; (coll.) to reach by stretching out
+
+gt: "Is it enough?"
+have I suffered enough?
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		讓淚最後一次為你留下
+	</p>
+	<p class="simplified">
+		让泪最后一次为你留下
+	</p>
+	<p class="pinyin">
+		ràng lèi zuì hòu yī cì wèi nǐ liú xià
+	</p>
+	<pre class="english">
+泪	lèi	tears
+
+最后	zuì hòu	final; last; finally; ultimate
+
+一次	yī cì	first; first time; once; (math.) linear (of degree one)
+
+为	wèi	because of; for; to
+wéi	variant of 為|为[wei2]; as (i.e. in the capacity of); to take sth as; to act as; to serve as; to behave as; to become; to be; to do
+wèi	variant of 為|为[wei4], because of; for; to
+wéi	as (in the capacity of); to take sth as; to act as; to serve as; to behave as; to become; to be; to do; by (in the passive voice)
+
+留下	liú xià	to leave behind; to stay behind; to remain; to keep; not to let (sb) go
+
+gt: "Let the tears last for you" - bad
+I left behind the final tears for you
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		痛夠了吧
+	</p>
+	<p class="simplified">
+		痛够了吧
+	</p>
+	<p class="pinyin">
+		tòng gòu le ba
+	</p>
+	<pre class="english">
+痛	tòng	ache; pain; sorrow; deeply; thoroughly
+
+I've ached enough  (confirm this?)
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		不用在誰眼裡假裝堅強
+	</p>
+	<p class="simplified">
+		不用在谁眼里假装坚强
+	</p>
+	<p class="pinyin">
+		bù yòng zài shéi yǎn lǐ jiǎ zhuāng jiān qiáng
+	</p>
+	<pre class="english">
+
+不用	bù yòng	need not
+
+在	zài	(located) at; (to be) in; to exist; in the middle of doing sth; (indicating an action in progress)
+
+谁	shéi	who; also pr. [shui2]
+
+眼	yǎn	eye; small hole; crux (of a matter); CL:隻|只[zhi1],雙|双[shuang1]; classifier for big hollow things (wells, stoves, pots etc)
+
+假装	jiǎ zhuāng	to feign; to pretend
+
+坚强	jiān qiáng	staunch; strong
+
+gt: "Don't pretend to be strong in anyone's eyes"
+I dont need to pretend to be strong in anyone's eyes?
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		看著那
+	</p>
+	<p class="simplified">
+		看着那
+	</p>
+	<p class="pinyin">
+		kàn zhe nà
+	</p>
+	<pre class="english">
+Looking at that
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		結痂的傷 風乾昇華
+	</p>
+	<p class="simplified">
+		结痂的伤 风干升华
+	</p>
+	<p class="pinyin">
+		jié jiā de shāng fēng gàn shēng huá
+	</p>
+	<pre class="english">
+结痂	jié jiā	scab; to form a scab
+
+伤	shāng	to injure; injury; wound
+
+风干	fēng gān	to air-dry; to season (timber etc); air-dried; air-drying
+
+升华	shēng huá	to sublimate; sublimation (physics); to raise to a higher level; to refine; promotion
+
+gt: "Scarred wounds" ??
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		在夜空中閃亮
+	</p>
+	<p class="simplified">
+		在夜空中闪亮
+	</p>
+	<p class="pinyin">
+		zài yè kōng zhōng shǎn liàng
+	</p>
+	<pre class="english">
+在	zài	(located) at; (to be) in; to exist; in the middle of doing sth; (indicating an action in progress)
+
+夜空	yè kōng	night sky
+
+中	zhōng	within; among; in; middle; center; while (doing sth); during; (dialect) OK; all right
+zhòng	to hit (the mark); to be hit by; to suffer; to win (a prize, a lottery)
+
+闪亮	shǎn liàng	brilliant; shiny; a flare; to glisten; to twinkle
+
+gt: "Shining in the night sky"
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		該出發了吧
+	</p>
+	<p class="simplified">
+		该出发了吧
+	</p>
+	<p class="pinyin">
+		gāi chū fā le ba
+	</p>
+	<pre class="english">
+该	gāi	should; ought to; probably; must be; to deserve; to owe; to be sb's turn to do sth; that; the above-mentioned
+
+shortened from 应该 ?
+
+出发	chū fā	to set off; to start (on a journey)
+
+gt: "Let's go."
+
+I should get moving
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		謝謝你曾經讓我悲傷
+	</p>
+	<p class="simplified">
+		谢谢你曾经让我悲伤
+	</p>
+	<p class="pinyin">
+		xiè xiè nǐ céng jīng ràng wǒ bēi shāng
+	</p>
+	<pre class="english">
+Thank you for making me sad. 
+	</pre>
+</div>
+
+<br />
+
+<div class="line">
+	<p class="chinese">
+		白晝和回憶在青春的沙灘蒸發
+	</p>
+	<p class="simplified">
+		白昼和回忆在青春的沙滩蒸发
+	</p>
+	<p class="pinyin">
+		bái zhòu hé huí yì zài qīng chūn de shā tān zhēng fā
+	</p>
+	<pre class="english">
+白昼	bái zhòu	daytime
+
+回忆	huí yì	to recall; memories; CL:個|个[ge4]
+
+青春	qīng chūn	youth; youthfulness
+
+沙滩	shā tān	beach; sandy shore; CL:片[pian4]
+
+蒸发	zhēng fā	to evaporate; evaporation
+
+gt: "White pelicans and memories evaporate in the sandy beaches of youth" ??
+
+why pelicans?
+is it actually daytime?
+
+the memories are of daytimes at youthful beaches, and they are evaporating
+
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		衝刷的浪花帶走了曾經的信仰
+	</p>
+	<p class="simplified">
+		冲刷的浪花带走了曾经的信仰
+	</p>
+	<p class="pinyin">
+		chōng shuā de làng huā dài zǒu le céng jīng de xìn yǎng
+	</p>
+	<pre class="english">
+冲刷	chōng shuā	to cleanse; to scrub; to scour; to wash down; to erode; to wash away; J - also specifically talking about the shoreline moving up and down with the waves, washing away footsteps or anything else
+
+浪花	làng huā	spray; ocean spray; spindrift; fig. happenings from one's life; CL:朵[duo3] 
+J - literally Wave
+
+带走	dài zǒu	to carry; to take away
+
+信仰	xìn yǎng	to believe in (a religion); firm belief; conviction
+
+
+gt: "The washed waves took away the beliefs of the past"
+
+cleansing events in my life already took away my conviction ? ew
+
+
+
+	</pre>
+</div>
+</div>
