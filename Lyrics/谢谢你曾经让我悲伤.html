@@ -51,6 +51,13 @@
 	#characterSetForm {
 		text-align: center;
 	}
+
+	.no-select * {
+	  -webkit-user-select: none; /* Safari 3.1+ */
+	  -moz-user-select: none; /* Firefox 2+ */
+	  -ms-user-select: none; /* IE 10+ */
+	  user-select: none; /* Standard syntax */
+	}
 </style>
 
 <style type="text/css" id="mutable-style">
@@ -68,31 +75,15 @@
 <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed//iTIKzLyQDS0' frameborder='0' allowfullscreen></iframe></div>
 
 <form name="characterSetForm" id="characterSetForm">
-	<input type="radio" name="characterSet" value="chinese" checked="true">Traditional
-	<input type="radio" name="characterSet" value="simplified">Simplified
-	<input type="radio" name="characterSet" value="pinyin">Pinyin
+	<input id="chinese" type="radio" name="characterSet" value="chinese" checked="true">
+	<label for="chinese">Traditional</label>
+	<input id="simplified" type="radio" name="characterSet" value="simplified">
+	<label for="simplified">Simplified</label>
+	<input id="pinyin" type="radio" name="characterSet" value="pinyin">
+	<label for="pinyin">Pinyin</label>
+	<input id="selectable" type="checkbox" name="selectable">
+	<label for="selectable">Selectable</label>
 </form>
-<script type="text/javascript">
-	var supportedSets = ['chinese', 'simplified', 'pinyin']
-	var styleTag = document.getElementById('mutable-style');
-
-	let changeStyle = function(characterSet) {
-	        let styleString = '';
-			for (let i = 0; i < supportedSets.length; i++) {
-				styleString += `.${ supportedSets[i] } { display: ${ characterSet === supportedSets[i] ? 'inline-block' : 'none' }; }`
-			}
-			styleTag.innerHTML = styleString;
-	    }
-
-	let rad = document.characterSetForm.characterSet;
-	for (let i = 0; i < rad.length; i++) {
-	    rad[i].addEventListener('change', (event) => { 
-	    	changeStyle(event.target.value); 
-	    });
-	}
-</script>
-
-
 <!--
 <div class="line">
 	<p class="chinese">
@@ -107,8 +98,9 @@
 
 
 -->
-<div id="content">
-	<h4>
+<div id="content" class="no-select">
+
+<h4>
 	謝謝你曾經讓我悲傷 - 原子邦妮 Astro Bunny 
 </h4>
 
@@ -556,3 +548,31 @@ cleansing events in my life already took away my conviction ? ew
 	</pre>
 </div>
 </div>
+<script type="text/javascript">
+	var contentDiv = document.getElementById('content');
+	var supportedSets = ['chinese', 'simplified', 'pinyin']
+	var styleTag = document.getElementById('mutable-style');
+
+	let changeStyle = function(characterSet) {
+		let styleString = '';
+		for (let i = 0; i < supportedSets.length; i++) {
+			styleString += `.${ supportedSets[i] } { display: ${ characterSet === supportedSets[i] ? 'inline-block' : 'none' }; }`
+		}
+		styleTag.innerHTML = styleString;
+	}
+
+	let rad = document.characterSetForm.characterSet;
+	for (let i = 0; i < rad.length; i++) {
+		rad[i].addEventListener('change', (event) => { 
+			changeStyle(event.target.value); 
+		});
+	}
+
+	document.characterSetForm.selectable.addEventListener('change', (event) => {
+		if (event.target.checked) {
+			contentDiv.classList.remove("no-select")
+		} else {
+			contentDiv.classList.add("no-select")
+		}
+	})
+</script>
