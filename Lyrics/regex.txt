@@ -1,0 +1,13 @@
+([\h|\w]*)\t([\h|\w]*)\t([\h|\w]*)\t([\h|\w|'|\?]*)
+
+
+<div class="line">
+	<p class="chinese">\n\t\t${1}
+	</p>
+	<p class="simplified">\n\t\t${2}
+	</p>
+	<p class="pinyin">\n\t\t${3}
+	</p>
+	<pre class="english">
+	</pre>
+</div>

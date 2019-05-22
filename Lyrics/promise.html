@@ -1,0 +1,820 @@
+<style type="text/css">
+	iframe {
+		width: 100%;
+	}
+	body {
+		background-color: #222;
+		color: #EEE;
+	}
+	#content {
+		padding: 0 10%;
+	}
+	.english {
+		display: none;
+		position: absolute;
+		left: 2em;
+		bottom: 2em;
+		padding: 1em;
+		background: #333;
+		color: #EEE;
+		border: 1px black solid;
+		border-radius: 10px;
+		z-index: 10;
+		font-size: 0.75em;
+		max-width: 80%;  
+		white-space: pre-wrap;
+	}
+
+	.chinese:hover + p + p + .english, 
+	.simplified:hover + p + .english,
+	.pinyin:hover + .english,
+	.english:hover
+	{
+		display: block;
+	}
+
+	.chinese,
+	.simplified,
+	.pinyin {
+		font: Roboto, Arial, sans-serif;
+	}
+
+	.line {
+		font-size: 1.5em;
+		display: block;
+		position: relative;
+	}
+	pre, p {
+		margin: 0;
+	}
+	#characterSetForm {
+		text-align: center;
+	}
+</style>
+
+<style type="text/css" id="mutable-style">
+	.chinese {
+		display: inline-block;
+	}
+	.simplified {
+		display: none;
+	}
+	.pinyin {
+		display: none;
+	}
+</style>
+
+<!--
+<div class="line">
+	<p class="chinese">
+	</p>
+	<p class="simplified">
+	</p>
+	<p class="pinyin">
+	</p>
+	<p class="pinyin">
+	</p>
+	<pre class="english">
+	</pre>
+</div>
+
+
+-->
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/UZVtMwY0WdU?list=PLO1E-UPQf5yaIjJVikeRj_RnoCORrYLBP' frameborder='0' allowfullscreen></iframe></div>
+
+<form name="characterSetForm" id="characterSetForm">
+	<input type="radio" name="characterSet" value="chinese" checked="true">Traditional
+	<input type="radio" name="characterSet" value="simplified">Simplified
+	<input type="radio" name="characterSet" value="pinyin">Pinyin
+</form>
+<script type="text/javascript">
+	var supportedSets = ['chinese', 'simplified', 'pinyin']
+	var styleTag = document.getElementById('mutable-style');
+
+	let changeStyle = function(characterSet) {
+		let styleString = '';
+		for (let i = 0; i < supportedSets.length; i++) {
+			styleString += `.${ supportedSets[i] } { display: ${ characterSet === supportedSets[i] ? 'inline-block' : 'none' }; }`
+		}
+		styleTag.innerHTML = styleString;
+	}
+
+	let rad = document.characterSetForm.characterSet;
+	for (let i = 0; i < rad.length; i++) {
+		rad[i].addEventListener('change', (event) => { 
+			changeStyle(event.target.value); 
+		});
+	}
+</script>
+<div id="content">
+
+	<h4>
+		#imissyousobad
+		Astro Bunny
+	</h4>
+
+	<br />
+<!--
+<div class="line">
+	<p class="chinese">
+	</p>
+	<p class="simplified">
+	</p>
+	<p class="pinyin">
+	</p>
+	<pre class="english">
+	</pre>
+</div>
+-->
+黑暗裡我關上門安靜略帶無助,<div class="line">
+	<p class="chinese">
+		黑暗里我关上门安静略带无助
+	</p>
+	<p Class="simplifieD">
+		hēi àn lǐ wǒ guān shàng mén ān jìng lüè dài wú zhù 
+	</p>
+	<p class="pinyin">
+		In the darkness I close the doors
+	</p>
+	<pre class="english">
+ quietly feeling helpless
+	</pre>
+</div>
+物是人非的舞台 確實遺憾倒影,<div class="line">
+	<p class="chinese">
+		物是人非的舞台 确实遗憾倒影
+	</p>
+	<p Class="simplified">
+		wù shì rén fēi dí wǔ tái   què shí yí hàn dǎo yǐng 
+	</p>
+	<p class="pinyin">
+		The stage that has changed
+	</p>
+	<pre class="english">
+ certainly leaves a regretful reflection
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		你默默為我付出一切卻從來不提起
+	</p>
+	<p class="simplified">
+		你默默为我付出一切却从来不提起
+	</p>
+	<p class="pinyin">
+		nǐ mò mò wéi wǒ fù chū yī qiē què cóng lái bù tí qǐ 
+	</p>
+	<pre class="english">
+You silently gave me so much but never mentioned it
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我鼓起勇氣再次睜開我的眼睛
+	</p>
+	<p class="simplIfied">
+		我鼓起勇气再次睁开我的眼睛
+	</p>
+	<p class="pinyin">
+		wǒ gǔ qǐ yǒng qì zài cì zhēng kāi wǒ dí yǎn jīng 
+	</p>
+	<pre class="english">
+I plucked up my courage and opened my eyes once again
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		時間在一點一點慢慢的溜走
+	</p>
+	<p class="simPlified">
+		时间在一点一点慢慢的溜走
+	</p>
+	<p class="pinyin">
+		shí jiān zài yī diǎn yī diǎn màn màn dí liū zǒu 
+	</p>
+	<pre class="english">
+Time is slowly slipping away bit by bit
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我為你做的一切可能還不夠
+	</p>
+	<p class="simplified">
+		我为你做的一切可能还不够
+	</p>
+	<p class="pinyin">
+		wǒ wéi nǐ zuò dí yī qiē kě néng huán bù gòu 
+	</p>
+	<pre class="english">
+Everything I do for you may not be enough
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我依然掙扎着要抱緊你
+	</p>
+	<p class="simplified">
+		我依然挣扎着要抱紧你
+	</p>
+	<p class="pinyin">
+		wǒ yī rán zhèng zā zhuó yào bào jǐn nǐ 
+	</p>
+	<pre class="english">
+Still I struggle to hold you tight
+	</pre>
+</div>
+不可能有人可以去代替 就像我們的約定,不可能有人可以去代替 就像我们的约定,bù kě néng yǒu rén kě yǐ qù dài tì   jiù xiàng wǒ mén dí yuē dìng ,There’s no way anyone will be able to replace, just like our promise
+ ,
+在溜走的時間 我用淚水祭奠,<div class="line">
+	<p class="chinese">
+		在溜走的时间 我用泪水祭奠
+	</p>
+	<p Class="simplified">
+		zài liū zǒu dí shí jiān   wǒ yòng lèi shuǐ jì diàn 
+	</p>
+	<p class="pinyin">
+		In the time that slipped away
+	</p>
+	<pre class="english">
+ I use my tears as a tribute
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		懷念那過往的一切
+	</p>
+	<p class="simplified">
+		怀念那过往的一切
+	</p>
+	<p class="pinyin">
+		huái niàn nà guò wǎng dí yī qiē 
+	</p>
+	<pre class="english">
+Remembering all that happened in the past
+	</pre>
+</div>
+想說聲對不起 可是我好愛你,<div class="line">
+	<p class="chinese">
+		想说声对不起 可是我好爱你
+	</p>
+	<P class="simplified">
+		xIǎng shuō shēng duì bù qǐ   kě shì wǒ hǎo ài nǐ 
+	</p>
+	<p class="pinyin">
+		I want to say sorry
+	</p>
+	<pre class="english">
+ but I love you so much
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		請你再次給予我相信
+	</p>
+	<p class="simplified">
+		请你再次给予我相信
+	</p>
+	<p class="pinyin">
+		qǐng nǐ zài cì gěi yú wǒ xiāng xìn 
+	</p>
+	<pre class="english">
+Please give me your trust once again
+	</pre>
+</div>
+抱在我懷裡 雙手抓緊你,<div class="line">
+	<p class="chinese">
+		抱在我怀里 双手抓紧你
+	</p>
+	<p class="simplified">
+		bào zài wǒ huái lǐ   shuāng shǒu zhuā jǐn nǐ 
+	</p>
+	<p class="pinyin">
+		Holding you in my embrace
+	</p>
+	<pre class="english">
+ holding you tightly with my arms
+	</pre>
+</div>
+只要你開心 幸福 我願意,<div class="line">
+	<p class="chinese">
+		只要你开心 幸福 我愿意
+	</p>
+	<p class="simplified">
+		zhī yào nǐ kāi xīn   xìng fú   wǒ yuàn yì 
+	</p>
+	<p class="pinyin">
+		As long as you are happy and blessed
+	</p>
+	<pre class="english">
+ I am willing
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		把所有的 全給你
+	</p>
+	<p class="simplified">
+		把所有的 全给你
+	</p>
+	<p class="pinyin">
+		bǎ suǒ yǒu dí   quán gěi nǐ 
+	</p>
+	<pre class="english">
+To give you everything
+	</pre>
+</div>
+我不顧一切守護你微笑的眼睛 只為你,<div class="line">
+	<p class="chinese">
+		我不顾一切守护你微笑的眼睛 只为你
+	</p>
+	<p class="simPlified">
+		wǒ bù gù yī qiē shǒu hù nǐ wēi xiào dí yǎn jīng   zhī wéi nǐ 
+	</p>
+	<p class="pinyin">
+		I will protect your smiling eyes regardless of everything
+	</p>
+	<pre class="english">
+ only for you
+	</pre>
+</div>
+ ,
+不知什麼時候起 微笑着你的樣子不是你,不知什么时候起 微笑着你的样子不是你,bù zhī shí me shí hòu qǐ   wēi xiào zhuó nǐ dí yàng zǐ bù shì nǐ ,I don’t know when it started, the you who smiled is not you anymore
+<div class="line">
+	<p class="chinese">
+		若你的心不能再給我那樣的愛
+	</p>
+	<p class="simPlified">
+		若你的心不能再给我那样的爱
+	</p>
+	<p class="pinyin">
+		ruò nǐ dí xīn bù néng zài gěi wǒ nà yàng dí ài 
+	</p>
+	<pre class="english">
+If your heart can no longer give me that kind of love
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我還是會想起那些記憶
+	</p>
+	<P class="simplified">
+		我还是会想起那些记忆
+	</p>
+	<p class="pinyin">
+		wǒ huán shì huì xiǎng qǐ nà xiē jì yì 
+	</p>
+	<pre class="english">
+I will still remember those memories
+	</pre>
+</div>
+模糊的讓我覺得可惜,模糊的让我觉得可惜,mó hū dí ràng wǒ jué dé kě xī ,So blurry that I think it’s a pity
+一切會好的 都會過去的,<div class="line">
+	<p class="chinese">
+		一切会好的 都会过去的
+	</p>
+	<p class="simplified">
+		yī qiē huì hǎo dí   dū huì guò qù dí 
+	</p>
+	<p class="pinyin">
+		Everything will be alright
+	</p>
+	<pre class="english">
+ everything will pass
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		安慰已經不能夠安慰我的心
+	</p>
+	<p class="simplified">
+		安慰已经不能够安慰我的心
+	</p>
+	<p class="pinyin">
+		ān wèi yǐ jīng bù néng gòu ān wèi wǒ dí xīn 
+	</p>
+	<pre class="english">
+Consolation can no longer console my heart
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		因為我知道你有天會要離開
+	</p>
+	<p class="sImplifieD">
+		因为我知道你有天会要离开
+	</p>
+	<p class="pinyin">
+		yīn wéi wǒ zhī dào nǐ yǒu tiān huì yào lí kāi 
+	</p>
+	<pre class="english">
+Because I know one day you will leave
+	</pre>
+</div>
+請不要離開 我想握你的手,请不要离开 我想握你的手,qǐng bù yào lí kāi   wǒ xiǎng wò nǐ dí shǒu ,Please don’t leave, I want to hold your hand
+ ,
+反正已經逃避 誓言里的畫面沒有你,<div class="line">
+	<p class="chinese">
+		反正已经逃避 誓言里的画面没有你
+	</p>
+	<p class="simPlified">
+		fǎn zhèng yǐ jīng táo bì   shì yán lǐ dí huà miàn méi yǒu nǐ 
+	</p>
+	<p class="pinyin">
+		Already escaped anyway
+	</p>
+	<pre class="english">
+ the picture in this pledge does not have you
+	</pre>
+</div>
+知道 那能不能讓我永遠停留在你的左右圍繞,<div class="line">
+	<p class="chinese">
+		知道 那能不能让我永远停留在你的左右围绕
+	</p>
+	<p class="simplified">
+		zhī dàO   nà néng bù néng ràng wǒ yǒng yuǎn tíng liú zài nǐ dí zuǒ yòu wéi rào 
+	</p>
+	<p class="pinyin">
+		I know
+	</p>
+	<pre class="english">
+ then can you let me stay around you forever
+	</pre>
+</div>
+呼吸一樣 我們再次回憶,<div class="line">
+	<p class="chinese">
+		呼吸一样 我们再次回忆
+	</p>
+	<p class="simplified">
+		hū xī yī yàng   wǒ mén zài cì huí yì 
+	</p>
+	<p class="pinyin">
+		Breathing the same
+	</p>
+	<pre class="english">
+ we reminisce again
+	</pre>
+</div>
+謝謝你 對不起 我愛你,谢谢你 对不起 我爱你,xiè xiè nǐ   duì bù qǐ   wǒ ài nǐ ,Thank you, I’m sorry, I love you
+<div class="line">
+	<p class="chinese">
+		這些都已不足表達我的一切
+	</p>
+	<p claSs="simplified">
+		这些都已不足表达我的一切
+	</p>
+	<p class="pinyin">
+		zhè xiē dū yǐ bù zú biǎo dá wǒ dí yī qiē 
+	</p>
+	<pre class="english">
+All these are no longer enough to express my everything
+	</pre>
+</div>
+我的愛 就讓我守護你,<div class="line">
+	<p class="chinese">
+		我的爱 就让我守护你
+	</p>
+	<p class="simplified">
+		wǒ dí ài   jiù ràng wǒ shǒu hù nǐ 
+	</p>
+	<p class="pinyin">
+		My love
+	</p>
+	<pre class="english">
+ just let me protect you 
+	</pre>
+</div>
+yeah 還有那破碎的誓言,<div class="line">
+	<p class="chinese">
+		yeah 还有那破碎的誓言
+	</p>
+	<p class="simplified">
+		yeah   huán yǒu nà pò suì dí shì yán 
+	</p>
+	<p class="pinyin">
+		yeah
+	</p>
+	<pre class="english">
+ and that broken pledge
+	</pre>
+</div>
+,
+<div class="line">
+	<p class="chinese">
+		時間在一點一點慢慢的溜走
+	</p>
+	<p class="simPlified">
+		时间在一点一点慢慢的溜走
+	</p>
+	<p class="pinyin">
+		shí jiān zài yī diǎn yī diǎn màn màn dí liū zǒu 
+	</p>
+	<pre class="english">
+Time is slowly slipping away bit by bit
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我為你做的一切可能還不夠
+	</p>
+	<p class="simplified">
+		我为你做的一切可能还不够
+	</p>
+	<p class="pinyin">
+		wǒ wéi nǐ zuò dí yī qiē kě néng huán bù gòu 
+	</p>
+	<pre class="english">
+Everything I do for you may not be enough
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我依然掙扎着要抱緊你
+	</p>
+	<p class="simplified">
+		我依然挣扎着要抱紧你
+	</p>
+	<p class="pinyin">
+		wǒ yī rán zhèng zā zhuó yào bào jǐn nǐ 
+	</p>
+	<pre class="english">
+Still I struggle to hold you tight
+	</pre>
+</div>
+不可能有人可以去代替 就像我們的約定,不可能有人可以去代替 就像我们的约定,bù kě néng yǒu rén kě yǐ qù dài tì   jiù xiàng wǒ mén dí yuē dìng ,There’s no way anyone will be able to replace, just like our promise
+ ,
+回頭看這一路 眼淚卻止不住,<div class="line">
+	<p class="chinese">
+		回头看这一路 眼泪却止不住
+	</p>
+	<p class="simplified">
+		huí tóu kàn zhè yī lù   yǎn lèi què zhǐ bù zhù 
+	</p>
+	<p class="pinyin">
+		Looking back at this road
+	</p>
+	<pre class="english">
+ my tears cannot be stopped
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我把這一切 藏在心中
+	</p>
+	<P class="simplified">
+		我把这一切 藏在心中
+	</p>
+	<p class="pinyin">
+		wǒ bǎ zhè yī qiē   cáng zài xīn zhōng 
+	</p>
+	<pre class="english">
+I will hide all of this in my heart
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		帶着我的夢 和你給予的愛
+	</p>
+	<p claSs="simplified">
+		带着我的梦 和你给予的爱
+	</p>
+	<p class="pinyin">
+		dài zhuó wǒ dí mèng   hé nǐ gěi yú dí ài 
+	</p>
+	<pre class="english">
+Taking my dreams and the love you give me
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		所有汗水揮灑在舞台
+	</p>
+	<p class="simplified">
+		所有汗水挥洒在舞台
+	</p>
+	<p class="pinyin">
+		suǒ yǒu hàn shuǐ huī sǎ zài wǔ tái 
+	</p>
+	<pre class="english">
+All the sweat shed on the stage
+	</pre>
+</div>
+抱在我懷裡 雙手緊握你,<div class="line">
+	<p class="chinese">
+		抱在我怀里 双手紧握你
+	</p>
+	<p class="simplified">
+		bào zài wǒ huái lǐ   shuāng shǒu jǐn wò nǐ 
+	</p>
+	<p class="pinyin">
+		Holding you in my embrace
+	</p>
+	<pre class="english">
+ holding you tightly with my arms
+	</pre>
+</div>
+只要你開心幸福我願意,<div class="line">
+	<p class="chinese">
+		只要你开心幸福我愿意
+	</p>
+	<p class="simplified">
+		zhī yào nǐ kāi xīn xìng fú wǒ yuàn yì 
+	</p>
+	<p class="pinyin">
+		As long as you are happy and blessed
+	</p>
+	<pre class="english">
+ I am willing
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		把所有的 全給你
+	</p>
+	<p class="simplified">
+		把所有的 全给你
+	</p>
+	<p class="pinyin">
+		bǎ suǒ yǒu dí   quán gěi nǐ 
+	</p>
+	<pre class="english">
+To give you everything
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		那些美好時光里
+	</p>
+	<p class="simplified">
+		那些美好时光里
+	</p>
+	<p class="pinyin">
+		nà xiē měi hǎo shí guāng lǐ 
+	</p>
+	<pre class="english">
+In those beautiful days
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我和你在一起 一點一滴的記憶
+	</p>
+	<p class="sImplified">
+		我和你在一起 一点一滴的记忆
+	</p>
+	<p class="pinyin">
+		wǒ hé nǐ zài yī qǐ   yī diǎn yī dī dí jì yì 
+	</p>
+	<pre class="english">
+Every drop of memories of the times I spent with you
+	</pre>
+</div>
+你用肯定話語說 我們來創造奇迹,你用肯定话语说 我们来创造奇迹,nǐ yòng kěn dìng huà yǔ shuō   wǒ mén lái chuàng zào qí jì ,You said with certainty, “we will create miracles”
+用心感覺 知道你會在我身邊,<div class="line">
+	<p class="chinese">
+		用心感觉 知道你会在我身边
+	</p>
+	<p Class="simplified">
+		yòNg xīn gǎn jué   zhī dào nǐ huì zài wǒ shēn biān 
+	</p>
+	<p class="pinyin">
+		Using my heart to feel
+	</p>
+	<pre class="english">
+ I know you will be by my side
+	</pre>
+</div>
+（深呼吸 用心感覺 知道你會在我身邊）,（深呼吸 用心感觉 知道你会在我身边）,（ shēn hū xī   yòng xīn gǎn jué   zhī dào nǐ huì zài wǒ shēn biān ） ,(Take a deep breath, using my heart to feel, I know you will be by my side)
+向你約定 我要我們永遠,<div class="line">
+	<p class="chinese">
+		向你约定 我要我们永远
+	</P>
+	<p class="sImplified">
+		xiàng nǐ yuē dìng   wǒ yào wǒ mén yǒng yuǎn 
+	</p>
+	<p class="pinyin">
+		I promise you
+	</p>
+	<pre class="english">
+ I want our forever
+	</pre>
+</div>
+（別嘆息 向你約定 我要我們永遠）,（别叹息 向你约定 我要我们永远）,（ bié tàn xī   xiàng nǐ yuē dìng   wǒ yào wǒ mén yǒng yuǎn ） ,(Don’t sigh, I promise you, I want our forever)
+,
+我不會讓任何人傷你的心,我不会让任何人伤你的心,wǒ bù huì ràng rèn hé rén shāng nǐ dí xīn ,I won’t let anyone hurt your heart
+<div class="line">
+	<p class="chinese">
+		這是我唯一的堅定
+	</p>
+	<p class="simplified">
+		这是我唯一的坚定
+	</p>
+	<p class="pinyin">
+		zhè shì wǒ wéi yī dí jiān dìng 
+	</p>
+	<pre class="english">
+This is my only commitment
+	</pre>
+</div>
+在流走的時間 我用淚水祭奠,<div class="line">
+	<p class="chinese">
+		在流走的时间 我用泪水祭奠
+	</p>
+	<p Class="simplified">
+		zài liú zǒu dí shí jiān   wǒ yòng lèi shuǐ jì diàn 
+	</p>
+	<p class="pinyin">
+		In the time that slipped away
+	</p>
+	<pre class="english">
+ I use my tears as a tribute
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		懷念那過往的一切
+	</p>
+	<p class="simplified">
+		怀念那过往的一切
+	</p>
+	<p class="pinyin">
+		huái niàn nà guò wǎng dí yī qiē 
+	</p>
+	<pre class="english">
+Remembering all that happened in the past
+	</pre>
+</div>
+想說聲對不起 可是我好愛你,<div class="line">
+	<p class="chinese">
+		想说声对不起 可是我好爱你
+	</p>
+	<P class="simplified">
+		xIǎng shuō shēng duì bù qǐ   kě shì wǒ hǎo ài nǐ 
+	</p>
+	<p class="pinyin">
+		I want to say sorry
+	</p>
+	<pre class="english">
+ but I love you so much
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		就讓時間來為我證明
+	</p>
+	<p class="simplified">
+		就让时间来为我证明
+	</p>
+	<p class="pinyin">
+		jiù ràng shí jiān lái wéi wǒ zhèng míng 
+	</p>
+	<pre class="english">
+Just let time prove it for me 
+	</pre>
+</div>
+抱在我懷裡 雙手抓緊你,<div class="line">
+	<p class="chinese">
+		抱在我怀里 双手抓紧你
+	</p>
+	<p class="simplified">
+		bào zài wǒ huái lǐ   shuāng shǒu zhuā jǐn nǐ 
+	</p>
+	<p class="pinyin">
+		Holding you in my embrace
+	</p>
+	<pre class="english">
+ holding you tightly with my arms
+	</pre>
+</div>
+只要你開心 幸福 我願意,<div class="line">
+	<p class="chinese">
+		只要你开心 幸福 我愿意
+	</p>
+	<p class="simplified">
+		zhī yào nǐ kāi xīn   xìng fú   wǒ yuàn yì 
+	</p>
+	<p class="pinyin">
+		As long as you are happy and blessed
+	</p>
+	<pre class="english">
+ I am willing
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我會兌現這一切
+	</p>
+	<p class="simplified">
+		我会兑现这一切
+	</p>
+	<p class="pinyin">
+		wǒ huì duì xiàn zhè yī qiē
+	</p>
+	<pre class="english">
+I will honour all of this
+	</pre>
+</div>
+
+</div>
+
+

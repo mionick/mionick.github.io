@@ -1,0 +1,622 @@
+
+<style type="text/css">
+	iframe {
+		width: 100%;
+	}
+	body {
+		background-color: #222;
+		color: #EEE;
+	}
+	#content {
+		padding: 0 10%;
+	}
+	.english {
+		display: none;
+		position: absolute;
+		left: 2em;
+		bottom: 2em;
+		padding: 1em;
+		background: #333;
+		color: #EEE;
+		border: 1px black solid;
+		border-radius: 10px;
+		z-index: 10;
+		font-size: 0.75em;
+		max-width: 80%;  
+		white-space: pre-wrap;
+	}
+
+	.chinese:hover + p + p + .english, 
+	.simplified:hover + p + .english,
+	.pinyin:hover + .english,
+	.english:hover
+	{
+		display: block;
+	}
+
+	.chinese,
+	.simplified,
+	.pinyin {
+		font: Roboto, Arial, sans-serif;
+	}
+
+	.line {
+		font-size: 1.5em;
+		display: block;
+		position: relative;
+	}
+	pre, p {
+		margin: 0;
+	}
+	#characterSetForm {
+		text-align: center;
+	}
+</style>
+
+<style type="text/css" id="mutable-style">
+	.chinese {
+		display: inline-block;
+	}
+	.simplified {
+		display: none;
+	}
+	.pinyin {
+		display: none;
+	}
+</style>
+
+<!--
+<div class="line">
+	<p class="chinese">
+	</p>
+	<p class="simplified">
+	</p>
+	<p class="pinyin">
+	</p>
+	<p class="pinyin">
+	</p>
+	<pre class="english">
+	</pre>
+</div>
+
+
+-->
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/P00D-zUm3bg' frameborder='0' allowfullscreen></iframe></div>
+
+<form name="characterSetForm" id="characterSetForm">
+	<input type="radio" name="characterSet" value="chinese" checked="true">Traditional
+	<input type="radio" name="characterSet" value="simplified">Simplified
+	<input type="radio" name="characterSet" value="pinyin">Pinyin
+</form>
+<script type="text/javascript">
+	var supportedSets = ['chinese', 'simplified', 'pinyin']
+	var styleTag = document.getElementById('mutable-style');
+
+	let changeStyle = function(characterSet) {
+		let styleString = '';
+		for (let i = 0; i < supportedSets.length; i++) {
+			styleString += `.${ supportedSets[i] } { display: ${ characterSet === supportedSets[i] ? 'inline-block' : 'none' }; }`
+		}
+		styleTag.innerHTML = styleString;
+	}
+
+	let rad = document.characterSetForm.characterSet;
+	for (let i = 0; i < rad.length; i++) {
+		rad[i].addEventListener('change', (event) => { 
+			changeStyle(event.target.value); 
+		});
+	}
+</script>
+<div id="content">
+
+	<h4>
+		#imissyousobad
+		Astro Bunny
+	</h4>
+
+	<br />
+<div class="line">
+	<p class="cHinese">
+		白晝 黑夜
+	</p>
+	<p class="simplified">
+		白昼 黑夜
+	</p>
+	<p class="pinyin">
+		bái zhòu   hēi yè 
+	</p>
+	<pre class="english">
+White night
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		屏幕裡那張臉
+	</p>
+	<p class="simplified">
+		屏幕里那张脸
+	</p>
+	<p class="pinyin">
+		píng mù lǐ nà zhāng liǎn 
+	</p>
+	<pre class="english">
+Face on the screen
+	</pre>
+</div>
+<div class="line">
+	<p class="chineSe">
+		說著 想念
+	</p>
+	<p class="simplified">
+		说著 想念
+	</p>
+	<p class="pinyin">
+		shuō zhù   xiǎng niàn 
+	</p>
+	<pre class="english">
+Say I'm missing something
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		卻說不出為什麼會思念
+	</p>
+	<p class="simpliFied">
+		却说不出为什么会思念
+	</p>
+	<p class="pinyin">
+		què shuō bù chū wéi shí me huì sī niàn 
+	</p>
+	<pre class="english">
+Can't say why I'm missing it
+	</pre>
+</div>
+<div class="line">
+	<p class="Chinese">
+		夏日 冬夜
+	</p>
+	<p class="simplified">
+		夏日 冬夜
+	</p>
+	<p class="pinyin">
+		xià rì   dōng yè 
+	</p>
+	<pre class="english">
+Summer day, winter night
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		地球兩端的無解
+	</p>
+	<p class="simplified">
+		地球两端的无解
+	</p>
+	<p class="pinyin">
+		dì qiú liǎng duān dí wú jiě 
+	</p>
+	<pre class="english">
+No solution at either end of the earth
+	</pre>
+</div>
+<div class="line">
+	<p class="chiNese">
+		等著 來電
+	</p>
+	<p class="simplified">
+		等著 来电
+	</p>
+	<p class="pinyin">
+		děng zhù   lái diàn 
+	</p>
+	<pre class="english">
+Waiting for a call
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		卻等不到渴望的觸電
+	</p>
+	<p class="simplified">
+		却等不到渴望的触电
+	</p>
+	<p class="pinyin">
+		què děng bù dào kě wàng dí chù diàn 
+	</p>
+	<pre class="english">
+But can't wait for that eager electric shock
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		說好的那天 何時能再見
+	</p>
+	<p clasS="simplified">
+		说好的那天 何时能再见
+	</p>
+	<p class="pinyin">
+		shuō hǎo dí nà tiān   hé shí néng zài jiàn 
+	</p>
+	<pre class="english">
+On the agreed day, can we see each other again?
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		飄著櫻花雪 多希望有人陪
+	</p>
+	<p class="simpLified">
+		飘着樱花雪 多希望有人陪
+	</p>
+	<p class="pinyin">
+		piāo zhuó yīng huā xuě   duō xī wàng yǒu rén péi 
+	</p>
+	<pre class="english">
+Floating in the snow, I hope someone will go with you
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		懷念的從前 你是否留戀
+	</p>
+	<p class="simplified">
+		怀念的从前 你是否留恋
+	</p>
+	<p class="pinyin">
+		huái niàn dí cóng qián   nǐ shì fǒu liú liàn 
+	</p>
+	<pre class="english">
+Missing the past, are you nostalgic?
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		簡訊再看一遍
+	</p>
+	<p class="simplified">
+		简讯再看一遍
+	</p>
+	<p class="pinyin">
+		jiǎn xùn zài kàn yī biàn 
+	</p>
+	<pre class="english">
+Look at the news again
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		看著你十秒前更新的instagram
+	</p>
+	<p class="simplifieD">
+		看着你十秒前更新的Instagram
+	</p>
+	<p class="pinyin">
+		kàn zhuó nǐ shí miǎo qián gēng xīn dí instagram 
+	</p>
+	<pre class="english">
+Looking at the Instagram you put up 10 seconds ago
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		彷彿能看見我熟悉的笑臉從沒改變
+	</p>
+	<p class="simplified">
+		仿佛能看见我熟悉的笑脸从没改变
+	</p>
+	<p class="pinyin">
+		fǎng fó néng kàn jiàn wǒ shú xī dí xiào liǎn cóng méi gǎi biàn 
+	</p>
+	<pre class="english">
+It seems as if my familiar smile hasn't changed
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		恨不能讓你心動讓你捕捉每個瞬間
+	</p>
+	<p class="simplified">
+		恨不能让你心动让你捕捉每个瞬间
+	</p>
+	<p class="pinyin">
+		hèn bù néng ràng nǐ xīn dòng ràng nǐ bǔ zhuō měi gè shùn jiān 
+	</p>
+	<pre class="english">
+Hate can't stop your heart from capturing every moment
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		讓我孤單的世界
+	</p>
+	<p class="simplified">
+		让我孤单的世界
+	</p>
+	<p class="pinyin">
+		ràng wǒ gū dān dí shì jiè 
+	</p>
+	<pre class="english">
+Let me be alone in the world
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		重疊著時間 你在我身邊
+	</p>
+	<p class="simplified">
+		重叠著时间 你在我身边
+	</p>
+	<p class="pinyin">
+		zhòng dié zhù shí jiān   nǐ zài wǒ shēn biān 
+	</p>
+	<pre class="english">
+Overlapping time, you are by my side
+	</pre>
+</div>
+<div class="line">
+	<p class="chinesE">
+		I miss you so bad
+	</p>
+	<p class="simplified">
+		I miss you so bad
+	</p>
+	<p class="pinyin">
+		I miss you so bad
+	</p>
+	<pre class="english">
+I miss you so bad
+	</pre>
+</div>
+<div class="line">
+	<p class="cHinese">
+		白晝 黑夜
+	</p>
+	<p class="simplified">
+		白昼 黑夜
+	</p>
+	<p class="pinyin">
+		bái zhòu   hēi yè 
+	</p>
+	<pre class="english">
+White night
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		屏幕裡那張臉
+	</p>
+	<p class="simplified">
+		屏幕里那张脸
+	</p>
+	<p class="pinyin">
+		píng mù lǐ nà zhāng liǎn 
+	</p>
+	<pre class="english">
+Face on the screen
+	</pre>
+</div>
+<div class="line">
+	<p class="chineSe">
+		說著 想念
+	</p>
+	<p class="simplified">
+		说著 想念
+	</p>
+	<p class="pinyin">
+		shuō zhù   xiǎng niàn 
+	</p>
+	<pre class="english">
+Say I'm missing something
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		卻說不出為什麼會思念
+	</p>
+	<p class="simpliFied">
+		却说不出为什么会思念
+	</p>
+	<p class="pinyin">
+		què shuō bù chū wéi shí me huì sī niàn 
+	</p>
+	<pre class="english">
+Can't say why I'm missing it
+	</pre>
+</div>
+<div class="line">
+	<p class="Chinese">
+		夏日 冬夜
+	</p>
+	<p class="simplified">
+		夏日 冬夜
+	</p>
+	<p class="pinyin">
+		xià rì   dōng yè 
+	</p>
+	<pre class="english">
+Summer day, winter night
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		地球兩端的無解
+	</p>
+	<p class="simplified">
+		地球两端的无解
+	</p>
+	<p class="pinyin">
+		dì qiú liǎng duān dí wú jiě 
+	</p>
+	<pre class="english">
+No solution at either end of the earth
+	</pre>
+</div>
+<div class="line">
+	<p class="chiNese">
+		等著 來電
+	</p>
+	<p class="simplified">
+		等著 来电
+	</p>
+	<p class="pinyin">
+		děng zhù   lái diàn 
+	</p>
+	<pre class="english">
+Waiting for a call
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		卻等不到渴望的觸電
+	</p>
+	<p class="simplified">
+		却等不到渴望的触电
+	</p>
+	<p class="pinyin">
+		què děng bù dào kě wàng dí chù diàn 
+	</p>
+	<pre class="english">
+But can't wait for that eager electric shock
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		說好的那天 何時能再見
+	</p>
+	<p clasS="simplified">
+		说好的那天 何时能再见
+	</p>
+	<p class="pinyin">
+		shuō hǎo dí nà tiān   hé shí néng zài jiàn 
+	</p>
+	<pre class="english">
+On the agreed day, can we see each other again?
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		飄著櫻花雪 多希望有人陪
+	</p>
+	<p class="simpLified">
+		飘着樱花雪 多希望有人陪
+	</p>
+	<p class="pinyin">
+		piāo zhuó yīng huā xuě   duō xī wàng yǒu rén péi 
+	</p>
+	<pre class="english">
+Floating in the snow, I hope someone will go with you
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		懷念的從前 你是否留戀
+	</p>
+	<p class="simplified">
+		怀念的从前 你是否留恋
+	</p>
+	<p class="pinyin">
+		huái niàn dí cóng qián   nǐ shì fǒu liú liàn 
+	</p>
+	<pre class="english">
+Missing the past, are you nostalgic?
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		簡訊再看一遍
+	</p>
+	<p class="simplified">
+		简讯再看一遍
+	</p>
+	<p class="pinyin">
+		jiǎn xùn zài kàn yī biàn 
+	</p>
+	<pre class="english">
+Look at the news again
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		看著你十秒前更新的instagram
+	</p>
+	<p class="simplifieD">
+		看着你十秒前更新的Instagram
+	</p>
+	<p class="pinyin">
+		kàn zhuó nǐ shí miǎo qián gēng xīn dí instagram 
+	</p>
+	<pre class="english">
+Looking at the Instagram you put up 10 seconds ago
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		彷彿能看見我熟悉的笑臉從沒改變
+	</p>
+	<p class="simplified">
+		仿佛能看见我熟悉的笑脸从没改变
+	</p>
+	<p class="pinyin">
+		fǎng fó néng kàn jiàn wǒ shú xī dí xiào liǎn cóng méi gǎi biàn 
+	</p>
+	<pre class="english">
+It seems as if my familiar smile hasn't changed
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		恨不能讓你心動讓你捕捉每個瞬間
+	</p>
+	<p class="simplified">
+		恨不能让你心动让你捕捉每个瞬间
+	</p>
+	<p class="pinyin">
+		hèn bù néng ràng nǐ xīn dòng ràng nǐ bǔ zhuō měi gè shùn jiān 
+	</p>
+	<pre class="english">
+Hate can't stop your heart from capturing every moment
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		讓我孤單的世界
+	</p>
+	<p class="simplified">
+		让我孤单的世界
+	</p>
+	<p class="pinyin">
+		ràng wǒ gū dān dí shì jiè 
+	</p>
+	<pre class="english">
+Let me be alone in the world
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		重疊著時間 你在我身邊
+	</p>
+	<p class="simplified">
+		重叠著时间 你在我身边
+	</p>
+	<p class="pinyin">
+		zhòng dié zhù shí jiān   nǐ zài wǒ shēn biān 
+	</p>
+	<pre class="english">
+Overlapping time, you are by my side
+	</pre>
+</div>
+<div class="line">
+	<p class="chinesE">
+		I miss you so bad
+	</p>
+	<p class="simplified">
+		I miss you so bad
+	</p>
+	<p class="pinyin">
+		I miss you so bad
+	</p>
+	<pre class="english">
+I miss you so bad
+	</pre>
+</div>
+</div>
