@@ -1,0 +1,887 @@
+
+<style type="text/css">
+	iframe {
+		width: 100%;
+	}
+	body {
+		background-color: #222;
+		color: #EEE;
+	}
+	#content {
+		padding: 0 10% 6em;
+	}
+	.english {
+		display: none;
+		position: absolute;
+		left: 2em;
+		bottom: 2em;
+		padding: 1em;
+		background: #333;
+		color: #EEE;
+		border: 1px black solid;
+		border-radius: 10px;
+		z-index: 10;
+		font-size: 0.75em;
+		max-width: 80%;  
+		white-space: pre-wrap;
+	}
+
+	.chinese:hover + p + p + .english, 
+	.simplified:hover + p + .english,
+	.pinyin:hover + .english,
+	.english:hover
+	{
+		display: block;
+	}
+
+	.chinese,
+	.simplified,
+	.pinyin {
+		font: Roboto, Arial, sans-serif;
+	}
+
+	.line {
+		font-size: 1.5em;
+		display: block;
+		position: relative;
+	}
+	pre, p {
+		margin: 0;
+	}
+	#characterSetForm {
+		text-align: center;
+	}
+
+	.no-select * {
+	  -webkit-user-select: none; /* Safari 3.1+ */
+	  -moz-user-select: none; /* Firefox 2+ */
+	  -ms-user-select: none; /* IE 10+ */
+	  user-select: none; /* Standard syntax */
+	}
+</style>
+
+<style type="text/css" id="mutable-style">
+	.chinese {
+		display: inline-block;
+	}
+	.simplified {
+		display: none;
+	}
+	.pinyin {
+		display: none;
+	}
+</style>
+
+<!--
+<div class="line">
+	<p class="chinese">
+	</p>
+	<p class="simplified">
+	</p>
+	<p class="pinyin">
+	</p>
+	<p class="pinyin">
+	</p>
+	<pre class="english">
+	</pre>
+</div>
+
+
+-->
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/t-LbD56AjCY' frameborder='0' allowfullscreen></iframe></div>
+
+<form name="characterSetForm" id="characterSetForm">
+	<input id="chinese" type="radio" name="characterSet" value="chinese" checked="true">
+	<label for="chinese">Traditional</label>
+	<input id="simplified" type="radio" name="characterSet" value="simplified">
+	<label for="simplified">Simplified</label>
+	<input id="pinyin" type="radio" name="characterSet" value="pinyin">
+	<label for="pinyin">Pinyin</label>
+	<input id="selectable" type="checkbox" name="selectable">
+	<label for="selectable">Selectable</label>
+</form>
+<div id="content" class="no-select">
+
+	<h4>
+		孫盛希 feat. ØZI – Ai 曖 Tensions
+	</h4>
+
+	<br />
+<div class="line">
+	<p class="chinese">
+		I know 你也一直瞄著我
+	</p>
+	<p class="simplified">
+		I know 你也一直瞄著我
+	</p>
+	<p class="pinyin">
+		I know nǐ yě yīzhí miáozhe wǒ
+	</p>
+	<pre class="english">
+I know nǐ yě yīzhí miáozhe wǒ
+I know, you are always aiming at me.
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		喜歡你香水 就算不小心擦太多
+	</p>
+	<p class="simplified">
+		喜欢你香水 就算不小心擦太多
+	</p>
+	<p class="pinyin">
+		xǐhuān nǐ xiāngshuǐ jiùsuàn bù xiǎoxīn cā tài duō
+	</p>
+	<pre class="english">
+xǐhuān nǐ xiāngshuǐ jiùsuàn bù xiǎoxīn cā tài duō
+Like your perfume, even if you accidentally rub too much
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		不要 又是假裝經過
+	</p>
+	<p class="simplified">
+		不要 又是假装经过
+	</p>
+	<p class="pinyin">
+		bùyào yòu shì jiǎzhuāng jīngguò
+	</p>
+	<pre class="english">
+bùyào yòu shì jiǎzhuāng jīngguò
+Don’t pretend to pass
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我必須維持最美的 狀態並不輕鬆
+	</p>
+	<p class="simplified">
+		我必须维持最美的 状态并不轻松
+	</p>
+	<p class="pinyin">
+		wǒ bìxū wéichí zuìměi de zhuàngtài bìng bù qīngsōng
+	</p>
+	<pre class="english">
+wǒ bìxū wéichí zuìměi de zhuàngtài bìng bù qīngsōng
+I have to maintain the most beautiful state and not easy
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		那投入的 神情和動作
+	</p>
+	<p class="simplified">
+		那投入的 神情和动作
+	</p>
+	<p class="pinyin">
+		nà tóurù de shénqíng hé dòngzuò
+	</p>
+	<pre class="english">
+nà tóurù de shénqíng hé dòngzuò
+That sentiment and action
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		是彼此的 誘引和線索
+	</p>
+	<p class="simplified">
+		是彼此的 诱引和线索
+	</p>
+	<p class="pinyin">
+		shì bǐcǐ de yòuyǐn hé xiànsuǒ
+	</p>
+	<pre class="english">
+shì bǐcǐ de yòuyǐn hé xiànsuǒ
+Are each other's lures and clues
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		看誰對誰 先受不了了
+	</p>
+	<p class="simplified">
+		看谁对谁 先受不了了
+	</p>
+	<p class="pinyin">
+		kàn shuí duì shuí xiān shòu bùliǎole
+	</p>
+	<pre class="english">
+kàn shuí duì shuí xiān shòu bùliǎole
+See who is right, can’t stand it anymore.
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		誰就先表白了
+	</p>
+	<p class="simplified">
+		谁就先表白了
+	</p>
+	<p class="pinyin">
+		shuí jiù xiān biǎobáile
+	</p>
+	<pre class="english">
+shuí jiù xiān biǎobáile
+Who will confess first?
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		從某月某日愛上了 看起來壞壞的你
+	</p>
+	<p class="simplified">
+		从某月某日爱上了 看起来坏坏的你
+	</p>
+	<p class="pinyin">
+		cóng mǒu yuè mǒu rì ài shàngle kàn qǐlái huài huài de nǐ
+	</p>
+	<pre class="english">
+cóng mǒu yuè mǒu rì ài shàngle kàn qǐlái huài huài de nǐ
+I fell in love with a certain day of the month.
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		(壞壞的 還是乖乖的)
+	</p>
+	<p class="simplified">
+		(坏坏的 还是乖乖的)
+	</p>
+	<p class="pinyin">
+		(huài huài de háishì guāiguāi de)
+	</p>
+	<pre class="english">
+(huài huài de háishì guāiguāi de)
+(bad or awkward)
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		從沒有聊過一句話 卻又感覺很熟悉
+	</p>
+	<p class="simplified">
+		从没有聊过一句话 却又感觉很熟悉
+	</p>
+	<p class="pinyin">
+		cóng méiyǒu liáoguò yījù huà què yòu gǎnjué hěn shúxī
+	</p>
+	<pre class="english">
+cóng méiyǒu liáoguò yījù huà què yòu gǎnjué hěn shúxī
+Never talked a word but felt familiar
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		(很熟悉 卻又感覺不熟悉)
+	</p>
+	<p class="simplified">
+		(很熟悉 却又感觉不熟悉)
+	</p>
+	<p class="pinyin">
+		(hěn shúxī què yòu gǎnjué bù shúxī)
+	</p>
+	<pre class="english">
+(hěn shúxī què yòu gǎnjué bù shúxī)
+(very familiar but unfamiliar)
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		Ahahahah
+	</p>
+	<p class="simplified">
+		Ahahahah
+	</p>
+	<p class="pinyin">
+		Ahahahah
+	</p>
+	<pre class="english">
+Ahahahah
+Ahahahah
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		說不出口 不想打破
+	</p>
+	<p class="simplified">
+		说不出口 不想打破
+	</p>
+	<p class="pinyin">
+		shuō bu chūkǒu bùxiǎng dǎpò
+	</p>
+	<pre class="english">
+shuō bu chūkǒu bùxiǎng dǎpò
+Can’t say no, don’t want to break
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		這柔柔的 甜甜的 感受
+	</p>
+	<p class="simplified">
+		这柔柔的 甜甜的 感受
+	</p>
+	<p class="pinyin">
+		zhè róu róu de tián tián de gǎnshòu
+	</p>
+	<pre class="english">
+zhè róu róu de tián tián de gǎnshòu
+This soft sweet feeling
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		不想開口 不想戳破
+	</p>
+	<p class="simplified">
+		不想开口 不想戳破
+	</p>
+	<p class="pinyin">
+		bùxiǎng kāikǒu bùxiǎng chuō pò
+	</p>
+	<pre class="english">
+bùxiǎng kāikǒu bùxiǎng chuō pò
+Don't want to open, don't want to poke
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		這隱隱約約的 享受
+	</p>
+	<p class="simplified">
+		这隐隐约约的 享受
+	</p>
+	<p class="pinyin">
+		zhè yǐnyǐn yuē yuē de xiǎngshòu
+	</p>
+	<pre class="english">
+zhè yǐnyǐn yuē yuē de xiǎngshòu
+This faint enjoyment
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		Never really been good at this
+	</p>
+	<p class="simplified">
+		Never really been good at this
+	</p>
+	<p class="pinyin">
+		Never really been good at this
+	</p>
+	<pre class="english">
+Never really been good at this
+Never really been good at this
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		這欲擒故縱把妳氣死
+	</p>
+	<p class="simplified">
+		这欲擒故纵把妳气死
+	</p>
+	<p class="pinyin">
+		zhè yùqíngùzòng bǎ nǎi qì sǐ
+	</p>
+	<pre class="english">
+zhè yùqíngùzòng bǎ nǎi qì sǐ
+This is why you want to die.
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		I guess you prolly thinking..
+	</p>
+	<p class="simplified">
+		I guess you prolly thinking..
+	</p>
+	<p class="pinyin">
+		I guess you prolly thinking..
+	</p>
+	<pre class="english">
+I guess you prolly thinking..
+I guess you prolly thinking..
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		超級沒有安全感 why am I into him?
+	</p>
+	<p class="simplified">
+		超级没有安全感 why am I into him?
+	</p>
+	<p class="pinyin">
+		Chāojí méiyǒu ānquán gǎn why am I into him?
+	</p>
+	<pre class="english">
+Chāojí méiyǒu ānquán gǎn why am I into him?
+Super insecure Why am I into him?
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		But look
+	</p>
+	<p class="simplified">
+		But look
+	</p>
+	<p class="pinyin">
+		But look
+	</p>
+	<pre class="english">
+But look
+But look
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		這一切都是套路
+	</p>
+	<p class="simplified">
+		这一切都是套路
+	</p>
+	<p class="pinyin">
+		zhè yīqiè dōu shì tàolù
+	</p>
+	<pre class="english">
+zhè yīqiè dōu shì tàolù
+All this is a routine
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		需要技術
+	</p>
+	<p class="simplified">
+		需要技术
+	</p>
+	<p class="pinyin">
+		xūyào jìshù
+	</p>
+	<pre class="english">
+xūyào jìshù
+Need technology
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		Gotta act cool
+	</p>
+	<p class="simplified">
+		Gotta act cool
+	</p>
+	<p class="pinyin">
+		Gotta act cool
+	</p>
+	<pre class="english">
+Gotta act cool
+Gotta act cool
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		So into you
+	</p>
+	<p class="simplified">
+		So into you
+	</p>
+	<p class="pinyin">
+		So into you
+	</p>
+	<pre class="english">
+So into you
+So into you
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		跟妳相處 才發現這感覺是 mutual
+	</p>
+	<p class="simplified">
+		跟妳相处 才发现这感觉是 mutual
+	</p>
+	<p class="pinyin">
+		gēn nǎi xiāngchǔ cái fāxiàn zhè gǎnjué shì mutual
+	</p>
+	<pre class="english">
+gēn nǎi xiāngchǔ cái fāxiàn zhè gǎnjué shì mutual
+Getting along with you, I found out that this feeling is mutual
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		Oh Girl I’m such a fool
+	</p>
+	<p class="simplified">
+		Oh Girl I’m such a fool
+	</p>
+	<p class="pinyin">
+		Oh Girl I’m such a fool
+	</p>
+	<pre class="english">
+Oh Girl I’m such a fool
+Oh Girl I’m such a fool
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		好啊 你就這樣一直不靠近
+	</p>
+	<p class="simplified">
+		好啊 你就这样一直不靠近
+	</p>
+	<p class="pinyin">
+		hǎo a nǐ jiù zhèyàng yīzhí bù kàojìn
+	</p>
+	<pre class="english">
+hǎo a nǐ jiù zhèyàng yīzhí bù kàojìn
+Ok, you are always close.
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		那我也就這樣一直默默的觀察你
+	</p>
+	<p class="simplified">
+		那我也就这样一直默默的观察你
+	</p>
+	<p class="pinyin">
+		nà wǒ yě jiù zhèyàng yīzhí mòmò de guānchá nǐ
+	</p>
+	<pre class="english">
+nà wǒ yě jiù zhèyàng yīzhí mòmò de guānchá nǐ
+Then I have been observing you silently.
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		這到底 是哪個國度哪種遊戲
+	</p>
+	<p class="simplified">
+		这到底 是哪个国度哪种游戏
+	</p>
+	<p class="pinyin">
+		zhè dàodǐ shì nǎge guódù nǎ zhǒng yóuxì
+	</p>
+	<pre class="english">
+zhè dàodǐ shì nǎge guódù nǎ zhǒng yóuxì
+Which country is this game?
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我開始質疑 也開始無法冷靜
+	</p>
+	<p class="simplified">
+		我开始质疑 也开始无法冷静
+	</p>
+	<p class="pinyin">
+		wǒ kāishǐ zhíyí yě kāishǐ wúfǎ lěngjìng
+	</p>
+	<pre class="english">
+wǒ kāishǐ zhíyí yě kāishǐ wúfǎ lěngjìng
+I started to question and I couldn’t calm down.
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		那投入的 神情和動作
+	</p>
+	<p class="simplified">
+		那投入的 神情和动作
+	</p>
+	<p class="pinyin">
+		nà tóurù de shénqíng hé dòngzuò
+	</p>
+	<pre class="english">
+nà tóurù de shénqíng hé dòngzuò
+That sentiment and action
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		是對我的 誘引和線索
+	</p>
+	<p class="simplified">
+		是对我的 诱引和线索
+	</p>
+	<p class="pinyin">
+		shì duì wǒ de yòuyǐn hé xiànsuǒ
+	</p>
+	<pre class="english">
+shì duì wǒ de yòuyǐn hé xiànsuǒ
+Is a lure and clue to me
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		看誰對誰 先受不了了
+	</p>
+	<p class="simplified">
+		看谁对谁 先受不了了
+	</p>
+	<p class="pinyin">
+		kàn shuí duì shuí xiān shòu bùliǎole
+	</p>
+	<pre class="english">
+kàn shuí duì shuí xiān shòu bùliǎole
+See who is right, can’t stand it anymore.
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		那我先表白了
+	</p>
+	<p class="simplified">
+		那我先表白了
+	</p>
+	<p class="pinyin">
+		nà wǒ xiān biǎobáile
+	</p>
+	<pre class="english">
+nà wǒ xiān biǎobáile
+Then I will confess first.
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		從某月某日愛上了 看起來壞壞的你
+	</p>
+	<p class="simplified">
+		从某月某日爱上了 看起来坏坏的你
+	</p>
+	<p class="pinyin">
+		cóng mǒu yuè mǒu rì ài shàngle kàn qǐlái huài huài de nǐ
+	</p>
+	<pre class="english">
+cóng mǒu yuè mǒu rì ài shàngle kàn qǐlái huài huài de nǐ
+I fell in love with a certain day of the month.
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		(壞壞的 還是乖乖的)
+	</p>
+	<p class="simplified">
+		(坏坏的 还是乖乖的)
+	</p>
+	<p class="pinyin">
+		(huài huài de háishì guāiguāi de)
+	</p>
+	<pre class="english">
+(huài huài de háishì guāiguāi de)
+(bad or awkward)
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		從沒有聊過一句話 卻又感覺很熟悉
+	</p>
+	<p class="simplified">
+		从没有聊过一句话 却又感觉很熟悉
+	</p>
+	<p class="pinyin">
+		cóng méiyǒu liáoguò yījù huà què yòu gǎnjué hěn shúxī
+	</p>
+	<pre class="english">
+cóng méiyǒu liáoguò yījù huà què yòu gǎnjué hěn shúxī
+Never talked a word but felt familiar
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		(很熟悉 卻又感覺不熟悉)
+	</p>
+	<p class="simplified">
+		(很熟悉 却又感觉不熟悉)
+	</p>
+	<p class="pinyin">
+		(hěn shúxī què yòu gǎnjué bù shúxī)
+	</p>
+	<pre class="english">
+(hěn shúxī què yòu gǎnjué bù shúxī)
+(very familiar but unfamiliar)
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		Ahahahah
+	</p>
+	<p class="simplified">
+		Ahahahah
+	</p>
+	<p class="pinyin">
+		Ahahahah
+	</p>
+	<pre class="english">
+Ahahahah
+Ahahahah
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		說不出口 不想打破
+	</p>
+	<p class="simplified">
+		说不出口 不想打破
+	</p>
+	<p class="pinyin">
+		shuō bu chūkǒu bùxiǎng dǎpò
+	</p>
+	<pre class="english">
+shuō bu chūkǒu bùxiǎng dǎpò
+Can’t say no, don’t want to break
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		這柔柔的 甜甜的 感受
+	</p>
+	<p class="simplified">
+		这柔柔的 甜甜的 感受
+	</p>
+	<p class="pinyin">
+		zhè róu róu de tián tián de gǎnshòu
+	</p>
+	<pre class="english">
+zhè róu róu de tián tián de gǎnshòu
+This soft sweet feeling
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		不想開口 不想戳破
+	</p>
+	<p class="simplified">
+		不想开口 不想戳破
+	</p>
+	<p class="pinyin">
+		bùxiǎng kāikǒu bùxiǎng chuō pò
+	</p>
+	<pre class="english">
+bùxiǎng kāikǒu bùxiǎng chuō pò
+Don't want to open, don't want to poke
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		這隱隱約約的 享受
+	</p>
+	<p class="simplified">
+		这隐隐约约的 享受
+	</p>
+	<p class="pinyin">
+		zhè yǐnyǐn yuē yuē de xiǎngshòu
+	</p>
+	<pre class="english">
+zhè yǐnyǐn yuē yuē de xiǎngshòu
+This faint enjoyment
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		這真的不合乎邏輯 This feeling girl i just don’t get it
+	</p>
+	<p class="simplified">
+		这真的不合乎逻辑 This feeling girl i just don’t get it
+	</p>
+	<p class="pinyin">
+		zhè zhēn de bù héhū luójí This feeling girl i just don’t get it
+	</p>
+	<pre class="english">
+zhè zhēn de bù héhū luójí This feeling girl i just don’t get it
+This is really not logical. This feeling girl i just don’t get it
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		奇妙的感覺 就慢慢的淪陷
+	</p>
+	<p class="simplified">
+		奇妙的感觉 就慢慢的沦陷
+	</p>
+	<p class="pinyin">
+		qímiào de gǎnjué jiù màn man de lúnxiàn
+	</p>
+	<pre class="english">
+qímiào de gǎnjué jiù màn man de lúnxiàn
+Wonderful feeling, slowly falling
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		I just don’t wanna hold back 這引力就像是磁鐵
+	</p>
+	<p class="simplified">
+		I just don’t wanna hold back 这引力就像是磁铁
+	</p>
+	<p class="pinyin">
+		I just don’t wanna hold back zhè yǐnlì jiù xiàng shì cítiě
+	</p>
+	<pre class="english">
+I just don’t wanna hold back zhè yǐnlì jiù xiàng shì cítiě
+I just don’t wanna hold back. This gravitation is like a magnet.
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		你先 還是我先 會不會是重疊
+	</p>
+	<p class="simplified">
+		你先 还是我先 会不会是重叠
+	</p>
+	<p class="pinyin">
+		nǐ xiān háishì wǒ xiān huì bù huì shì chóngdié
+	</p>
+	<pre class="english">
+nǐ xiān háishì wǒ xiān huì bù huì shì chóngdié
+Are you still first, will I be overlapping first?
+	</pre>
+</div>
+
+
+</div>
+
+<script type="text/javascript">
+	var contentDiv = document.getElementById('content');
+	var supportedSets = ['chinese', 'simplified', 'pinyin']
+	var styleTag = document.getElementById('mutable-style');
+
+	let changeStyle = function(characterSet) {
+		let styleString = '';
+		for (let i = 0; i < supportedSets.length; i++) {
+			styleString += `.${ supportedSets[i] } { display: ${ characterSet === supportedSets[i] ? 'inline-block' : 'none' }; }`
+		}
+		styleTag.innerHTML = styleString;
+	}
+
+	let rad = document.characterSetForm.characterSet;
+	for (let i = 0; i < rad.length; i++) {
+		rad[i].addEventListener('change', (event) => { 
+			changeStyle(event.target.value); 
+		});
+	}
+
+	document.characterSetForm.selectable.addEventListener('change', (event) => {
+		if (event.target.checked) {
+			contentDiv.classList.remove("no-select")
+		} else {
+			contentDiv.classList.add("no-select")
+		}
+	})
+</script>
