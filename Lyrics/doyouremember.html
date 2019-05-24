@@ -1,0 +1,997 @@
+
+<style type="text/css">
+	iframe {
+		width: 100%;
+	}
+	body {
+		background-color: #222;
+		color: #EEE;
+	}
+	#content {
+		padding: 0 10% 6em;
+	}
+	.english {
+		display: none;
+		position: absolute;
+		left: 2em;
+		bottom: 2.3em;
+		padding: 1em;
+		background: #333;
+		color: #EEE;
+		border: 1px black solid;
+		border-radius: 10px;
+		z-index: 10;
+		font-size: 0.75em;
+		max-width: 80%;  
+		white-space: pre-wrap;
+	}
+
+	.chinese:hover + p + p + .english, 
+	.simplified:hover + p + .english,
+	.pinyin:hover + .english,
+	.english:hover
+	{
+		display: block;
+	}
+
+	.chinese,
+	.simplified,
+	.pinyin {
+		font: Roboto, Arial, sans-serif;
+	}
+
+	.line {
+		font-size: 1.5em;
+		display: block;
+		position: relative;
+	}
+	pre, p {
+		margin: 0;
+	}
+	#characterSetForm {
+		text-align: center;
+	}
+
+	.no-select * {
+	  -webkit-user-select: none; /* Safari 3.1+ */
+	  -moz-user-select: none; /* Firefox 2+ */
+	  -ms-user-select: none; /* IE 10+ */
+	  user-select: none; /* Standard syntax */
+	}
+</style>
+
+<style type="text/css" id="mutable-style">
+	.chinese {
+		display: inline-block;
+	}
+	.simplified {
+		display: none;
+	}
+	.pinyin {
+		display: none;
+	}
+</style>
+
+<!--
+<div class="line">
+	<p class="chinese">
+	</p>
+	<p class="simplified">
+	</p>
+	<p class="pinyin">
+	</p>
+	<p class="pinyin">
+	</p>
+	<pre class="english">
+	</pre>
+</div>
+
+
+-->
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/_-mx27fNCLM' frameborder='0' allowfullscreen></iframe></div>
+
+<form name="characterSetForm" id="characterSetForm">
+	<input id="chinese" type="radio" name="characterSet" value="chinese" checked="true">
+	<label for="chinese">Traditional</label>
+	<input id="simplified" type="radio" name="characterSet" value="simplified">
+	<label for="simplified">Simplified</label>
+	<input id="pinyin" type="radio" name="characterSet" value="pinyin">
+	<label for="pinyin">Pinyin</label>
+	<input id="selectable" type="checkbox" name="selectable">
+	<label for="selectable">Selectable</label>
+</form>
+<div id="content" class="no-select">
+
+	<h4>
+		想当年,我们一起走音的歌 - Butterworks
+	</h4>
+
+	<br />
+<div class="line">
+	<p class="chinese">
+		只怕我自己會愛上你 不敢讓自己靠的太近
+	</p>
+	<p class="simplified">
+		只怕我自己会爱上你 不敢让自己靠的太近
+	</p>
+	<p class="pinyin">
+		zhī pà wǒ zì jǐ huì ài shàng nǐ   bù gǎn ràng zì jǐ kào dí tài jìn 
+	</p>
+	<pre class="english">
+zhī pà wǒ zì jǐ huì ài shàng nǐ   bù gǎn ràng zì jǐ kào dí tài jìn 
+The fact that I am scared to love you, I don't dare to go close to you
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		怕我沒什麼能夠給你 愛你也需要很大的勇氣
+	</p>
+	<p class="simplified">
+		怕我没什么能够给你 爱你也需要很大的勇气
+	</p>
+	<p class="pinyin">
+		pà wǒ méi shí me néng gòu gěi nǐ   ài nǐ yě xū yào hěn dà dí yǒng qì
+	</p>
+	<pre class="english">
+pà wǒ méi shí me néng gòu gěi nǐ   ài nǐ yě xū yào hěn dà dí yǒng qì
+Afraid that I have not enough to give you, love needs a lot of courage
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		我難過的是 放棄你 放棄愛 放棄的夢被打碎 忍住悲哀
+	</p>
+	<p class="simplified">
+		我难过的是 放弃你 放弃爱 放弃的梦被打碎 忍住悲哀
+	</p>
+	<p class="pinyin">
+		wǒ nán guò dí shì   fàng qì nǐ   fàng qì ài   fàng qì dí mèng bèi dǎ suì   rěn zhù bēi āi 
+	</p>
+	<pre class="english">
+wǒ nán guò dí shì   fàng qì nǐ   fàng qì ài   fàng qì dí mèng bèi dǎ suì   rěn zhù bēi āi 
+I am able to give you up, give love up, give up all my dreams, holding back all my tears
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我以爲 是成全 你卻說你更不愉快
+	</p>
+	<p class="simplified">
+		我以为 是成全 你却说你更不愉快
+	</p>
+	<p class="pinyin">
+		wǒ yǐ wéi   shì chéng quán   nǐ què shuō nǐ gēng bù yú kuài 
+	</p>
+	<pre class="english">
+wǒ yǐ wéi   shì chéng quán   nǐ què shuō nǐ gēng bù yú kuài 
+I thought it was finished, but you were unhappy
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		明知道讓妳離開他的世界不可能會
+	</p>
+	<p class="simplified">
+		明知道让妳离开他的世界不可能会
+	</p>
+	<p class="pinyin">
+		míng zhī dào ràng 妳 lí kāi tā dí shì jiè bù kě néng huì 
+	</p>
+	<pre class="english">
+míng zhī dào ràng 妳 lí kāi tā dí shì jiè bù kě néng huì 
+Knowing that leaving his world is impossible,
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我還傻傻等到奇蹟出現的那一天
+	</p>
+	<p class="simplified">
+		我还傻傻等到奇迹出现的那一天
+	</p>
+	<p class="pinyin">
+		wǒ huán shǎ shǎ děng dào qí jì chū xiàn dí nà yī tiān 
+	</p>
+	<pre class="english">
+wǒ huán shǎ shǎ děng dào qí jì chū xiàn dí nà yī tiān 
+I still stubbornly waited for that miraculous day to come
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		直到那一天 妳會發現
+	</p>
+	<p class="simplified">
+		直到那一天 妳会发现
+	</p>
+	<p class="pinyin">
+		zhí dào nà yī tiān   妳 huì fā xiàn 
+	</p>
+	<pre class="english">
+zhí dào nà yī tiān   妳 huì fā xiàn 
+Until the day you notice me,
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		真正愛妳的人獨自守着傷悲
+	</p>
+	<p class="simplified">
+		真正爱妳的人独自守着伤悲
+	</p>
+	<p class="pinyin">
+		zhēn zhèng ài 妳 dí rén dú zì shǒu zhuó shāng bēi 
+	</p>
+	<pre class="english">
+zhēn zhèng ài 妳 dí rén dú zì shǒu zhuó shāng bēi 
+The person who truly loves you is sorrowfully alone
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		我愛你, 愛着你
+	</p>
+	<p class="simplified">
+		我爱你, 爱着你
+	</p>
+	<p class="pinyin">
+		wǒ ài nǐ ,   ài zhuó nǐ 
+	</p>
+	<pre class="english">
+wǒ ài nǐ ,   ài zhuó nǐ 
+I love you, loving you
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		就像老鼠愛大米
+	</p>
+	<p class="simplified">
+		就像老鼠爱大米
+	</p>
+	<p class="pinyin">
+		jiù xiàng lǎo shǔ ài dà mǐ 
+	</p>
+	<pre class="english">
+jiù xiàng lǎo shǔ ài dà mǐ 
+Just like how mice love rice
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		不管有多少風雨
+	</p>
+	<p class="simplified">
+		不管有多少风雨
+	</p>
+	<p class="pinyin">
+		bù guǎn yǒu duō shǎo fēng yǔ 
+	</p>
+	<pre class="english">
+bù guǎn yǒu duō shǎo fēng yǔ 
+Regardless of how stormy it is,
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我都會依然陪着你
+	</p>
+	<p class="simplified">
+		我都会依然陪着你
+	</p>
+	<p class="pinyin">
+		wǒ dū huì yī rán péi zhuó nǐ 
+	</p>
+	<pre class="english">
+wǒ dū huì yī rán péi zhuó nǐ 
+I will always still be with you
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		我想你, 想着 你
+	</p>
+	<p class="simplified">
+		我想你, 想着 你
+	</p>
+	<p class="pinyin">
+		wǒ xiǎng nǐ ,   xiǎng zhuó   nǐ 
+	</p>
+	<pre class="english">
+wǒ xiǎng nǐ ,   xiǎng zhuó   nǐ 
+I think of you, thinking of you
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		不管有多麼的苦
+	</p>
+	<p class="simplified">
+		不管有多么的苦
+	</p>
+	<p class="pinyin">
+		bù guǎn yǒu duō me dí kǔ 
+	</p>
+	<pre class="english">
+bù guǎn yǒu duō me dí kǔ 
+Regardless of how much suffering
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		只要能讓你開心
+	</p>
+	<p class="simplified">
+		只要能让你开心
+	</p>
+	<p class="pinyin">
+		zhī yào néng ràng nǐ kāi xīn 
+	</p>
+	<pre class="english">
+zhī yào néng ràng nǐ kāi xīn 
+As long as you are happy,
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我什麼都願意
+	</p>
+	<p class="simplified">
+		我什么都愿意
+	</p>
+	<p class="pinyin">
+		wǒ shí me dū yuàn yì 
+	</p>
+	<pre class="english">
+wǒ shí me dū yuàn yì 
+I will do anything
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		這樣愛你
+	</p>
+	<p class="simplified">
+		这样爱你
+	</p>
+	<p class="pinyin">
+		zhè yàng ài nǐ 
+	</p>
+	<pre class="english">
+zhè yàng ài nǐ 
+Loving you this way
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		我要變成童話裏
+	</p>
+	<p class="simplified">
+		我要变成童话里
+	</p>
+	<p class="pinyin">
+		wǒ yào biàn chéng tóng huà lǐ 
+	</p>
+	<pre class="english">
+wǒ yào biàn chéng tóng huà lǐ 
+I want to be like those in fairy tales,
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		你愛的那個天使
+	</p>
+	<p class="simplified">
+		你爱的那个天使
+	</p>
+	<p class="pinyin">
+		nǐ ài dí nà gè tiān shǐ 
+	</p>
+	<pre class="english">
+nǐ ài dí nà gè tiān shǐ 
+The angel you love,
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		張開雙手
+	</p>
+	<p class="simplified">
+		张开双手
+	</p>
+	<p class="pinyin">
+		zhāng kāi shuāng shǒu 
+	</p>
+	<pre class="english">
+zhāng kāi shuāng shǒu 
+Spreading my wings,
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		變成翅膀守護你
+	</p>
+	<p class="simplified">
+		变成翅膀守护你
+	</p>
+	<p class="pinyin">
+		biàn chéng chì bǎng shǒu hù nǐ 
+	</p>
+	<pre class="english">
+biàn chéng chì bǎng shǒu hù nǐ 
+Just to protect you
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		我的天空今天有點灰
+	</p>
+	<p class="simplified">
+		我的天空今天有点灰
+	</p>
+	<p class="pinyin">
+		wǒ dí tiān kōng jīn tiān yǒu diǎn huī 
+	</p>
+	<pre class="english">
+wǒ dí tiān kōng jīn tiān yǒu diǎn huī 
+My day is a little grey today
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我的心是個落葉的季節
+	</p>
+	<p class="simplified">
+		我的心是个落叶的季节
+	</p>
+	<p class="pinyin">
+		wǒ dí xīn shì gè luò yè dí jì jié 
+	</p>
+	<pre class="english">
+wǒ dí xīn shì gè luò yè dí jì jié 
+My heart is like the leaf during autumn season,
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我不知道如何度過今夜
+	</p>
+	<p class="simplified">
+		我不知道如何度过今夜
+	</p>
+	<p class="pinyin">
+		wǒ bù zhī dào rú hé dù guò jīn yè 
+	</p>
+	<pre class="english">
+wǒ bù zhī dào rú hé dù guò jīn yè 
+I do not know how to spend the night,
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		所有的燈早已經全都熄滅
+	</p>
+	<p class="simplified">
+		所有的灯早已经全都熄灭
+	</p>
+	<p class="pinyin">
+		suǒ yǒu dí dēng zǎo yǐ jīng quán dū xī miè 
+	</p>
+	<pre class="english">
+suǒ yǒu dí dēng zǎo yǐ jīng quán dū xī miè 
+The lights have all already gone out
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		沒有誰能把你搶離我身旁
+	</p>
+	<p class="simplified">
+		没有谁能把你抢离我身旁
+	</p>
+	<p class="pinyin">
+		méi yǒu shuí néng bǎ nǐ qiǎng lí wǒ shēn páng 
+	</p>
+	<pre class="english">
+méi yǒu shuí néng bǎ nǐ qiǎng lí wǒ shēn páng 
+No one can steal you from my side,
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		你是我的專屬天使
+	</p>
+	<p class="simplified">
+		你是我的专属天使
+	</p>
+	<p class="pinyin">
+		nǐ shì wǒ dí zhuān shǔ tiān shǐ 
+	</p>
+	<pre class="english">
+nǐ shì wǒ dí zhuān shǔ tiān shǐ 
+You are an exclusive angel to me
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		唯我能獨佔
+	</p>
+	<p class="simplified">
+		唯我能独占
+	</p>
+	<p class="pinyin">
+		wéi wǒ néng dú zhān 
+	</p>
+	<pre class="english">
+wéi wǒ néng dú zhān 
+Only I can control you
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		你愛我還是他
+	</p>
+	<p class="simplified">
+		你爱我还是他
+	</p>
+	<p class="pinyin">
+		nǐ ài wǒ huán shì tā 
+	</p>
+	<pre class="english">
+nǐ ài wǒ huán shì tā 
+Do you love me or him
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		就說出你想說的真心話
+	</p>
+	<p class="simplified">
+		就说出你想说的真心话
+	</p>
+	<p class="pinyin">
+		jiù shuō chū nǐ xiǎng shuō dí zhēn xīn huà 
+	</p>
+	<pre class="english">
+jiù shuō chū nǐ xiǎng shuō dí zhēn xīn huà 
+Say what you actually think
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		你到底要跟我還是他
+	</p>
+	<p class="simplified">
+		你到底要跟我还是他
+	</p>
+	<p class="pinyin">
+		nǐ dào dǐ yào gēn wǒ huán shì tā 
+	</p>
+	<pre class="english">
+nǐ dào dǐ yào gēn wǒ huán shì tā 
+Do you want to follow me or him
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		什麼原因 Yeah
+	</p>
+	<p class="simplified">
+		什么原因 Yeah
+	</p>
+	<p class="pinyin">
+		shí me yuán yīn   Yeah 
+	</p>
+	<pre class="english">
+shí me yuán yīn   Yeah 
+What is the reason (Yeah)
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我竟然又會遇見你
+	</p>
+	<p class="simplified">
+		我竟然又会遇见你
+	</p>
+	<p class="pinyin">
+		wǒ jìng rán yòu huì yù jiàn nǐ 
+	</p>
+	<pre class="english">
+wǒ jìng rán yòu huì yù jiàn nǐ 
+I actually met you again
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我真的真的不願意
+	</p>
+	<p class="simplified">
+		我真的真的不愿意
+	</p>
+	<p class="pinyin">
+		wǒ zhēn dí zhēn dí bù yuàn yì 
+	</p>
+	<pre class="english">
+wǒ zhēn dí zhēn dí bù yuàn yì 
+I really do not want to do it
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		就這樣陷入愛的陷阱
+	</p>
+	<p class="simplified">
+		就这样陷入爱的陷阱
+	</p>
+	<p class="pinyin">
+		jiù zhè yàng xiàn rù ài dí xiàn jǐng 
+	</p>
+	<pre class="english">
+jiù zhè yàng xiàn rù ài dí xiàn jǐng 
+Caught in the trap of love just like that
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		我知道 你和我 就像是豆漿油條
+	</p>
+	<p class="simplified">
+		我知道 你和我 就像是豆浆油条
+	</p>
+	<p class="pinyin">
+		wǒ zhī dào   nǐ hé wǒ   jiù xiàng shì dòu jiāng yóu tiáo 
+	</p>
+	<pre class="english">
+wǒ zhī dào   nǐ hé wǒ   jiù xiàng shì dòu jiāng yóu tiáo 
+I know that you and I are like Fried dough sticks
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		要一起 吃下去 味道纔會是最好
+	</p>
+	<p class="simplified">
+		要一起 吃下去 味道才会是最好
+	</p>
+	<p class="pinyin">
+		yào yī qǐ   chī xià qù   wèi dào cái huì shì zuì hǎo 
+	</p>
+	<pre class="english">
+yào yī qǐ   chī xià qù   wèi dào cái huì shì zuì hǎo 
+Only if its together then it will taste nice
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		豆漿離不開油條 讓我愛你愛到老
+	</p>
+	<p class="simplified">
+		豆浆离不开油条 让我爱你爱到老
+	</p>
+	<p class="pinyin">
+		dòu jiāng lí bù kāi yóu tiáo   ràng wǒ ài nǐ ài dào lǎo 
+	</p>
+	<pre class="english">
+dòu jiāng lí bù kāi yóu tiáo   ràng wǒ ài nǐ ài dào lǎo 
+The soybean paste will not leave the dough sticks, let me love you till I'm old
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		愛情就是要這樣它才幸福美好
+	</p>
+	<p class="simplified">
+		爱情就是要这样它才幸福美好
+	</p>
+	<p class="pinyin">
+		ài qíng jiù shì yào zhè yàng tā cái xìng fú měi hǎo 
+	</p>
+	<pre class="english">
+ài qíng jiù shì yào zhè yàng tā cái xìng fú měi hǎo 
+Love needs to be like that so it won't be dull
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		少了我的手臂當枕頭 你習不習慣
+	</p>
+	<p class="simplified">
+		少了我的手臂当枕头 你习不习惯
+	</p>
+	<p class="pinyin">
+		shǎo liǎo wǒ dí shǒu bì dāng zhěn tóu   nǐ xí bù xí guàn 
+	</p>
+	<pre class="english">
+shǎo liǎo wǒ dí shǒu bì dāng zhěn tóu   nǐ xí bù xí guàn 
+Will you get used to my hands being your pillow
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		你的望遠鏡望不到 我北半球的孤單
+	</p>
+	<p class="simplified">
+		你的望远镜望不到 我北半球的孤单
+	</p>
+	<p class="pinyin">
+		nǐ dí wàng yuǎn jìng wàng bù dào   wǒ běi bàn qiú dí gū dān 
+	</p>
+	<pre class="english">
+nǐ dí wàng yuǎn jìng wàng bù dào   wǒ běi bàn qiú dí gū dān 
+Your telescope cannot capture the loneliness of myself
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		太平洋的潮水跟着地球 來回旋轉
+	</p>
+	<p class="simplified">
+		太平洋的潮水跟着地球 来回旋转
+	</p>
+	<p class="pinyin">
+		tài píng yáng dí cháo shuǐ gēn zhuó dì qiú   lái huí xuán zhuǎn 
+	</p>
+	<pre class="english">
+tài píng yáng dí cháo shuǐ gēn zhuó dì qiú   lái huí xuán zhuǎn 
+The tide of the sea follows Earth, rotating back and forth
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我會耐心地等 我的夢通通給你保管
+	</p>
+	<p class="simplified">
+		我会耐心地等 我的梦通通给你保管
+	</p>
+	<p class="pinyin">
+		wǒ huì nài xīn dì děng   wǒ dí mèng tōng tōng gěi nǐ bǎo guǎn 
+	</p>
+	<pre class="english">
+wǒ huì nài xīn dì děng   wǒ dí mèng tōng tōng gěi nǐ bǎo guǎn 
+I will patiently wait for my dream to marry you come true
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		就是開不了口讓她知道
+	</p>
+	<p class="simplified">
+		就是开不了口让她知道
+	</p>
+	<p class="pinyin">
+		jiù shì kāi bù liǎo kǒu ràng tā zhī dào 
+	</p>
+	<pre class="english">
+jiù shì kāi bù liǎo kǒu ràng tā zhī dào 
+I cannot open my mouth to let her know
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		就是那麼簡單幾句我辦不到
+	</p>
+	<p class="simplified">
+		就是那么简单几句我办不到
+	</p>
+	<p class="pinyin">
+		jiù shì nà me jiǎn dān jī jù wǒ bàn bù dào 
+	</p>
+	<pre class="english">
+jiù shì nà me jiǎn dān jī jù wǒ bàn bù dào 
+I cannot say those short and simple sentences
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		你要我說多難堪
+	</p>
+	<p class="simplified">
+		你要我说多难堪
+	</p>
+	<p class="pinyin">
+		nǐ yào wǒ shuō duō nán kān 
+	</p>
+	<pre class="english">
+nǐ yào wǒ shuō duō nán kān 
+You want me to say how embarrassed I am
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		我根本不想分開
+	</p>
+	<p class="simplified">
+		我根本不想分开
+	</p>
+	<p class="pinyin">
+		wǒ gēn běn bù xiǎng fēn kāi 
+	</p>
+	<pre class="english">
+wǒ gēn běn bù xiǎng fēn kāi 
+I do not want to break up at all
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		爲什麼還要我用微笑來帶過
+	</p>
+	<p class="simplified">
+		为什么还要我用微笑来带过
+	</p>
+	<p class="pinyin">
+		wéi shí me huán yào wǒ yòng wēi xiào lái dài guò 
+	</p>
+	<pre class="english">
+wéi shí me huán yào wǒ yòng wēi xiào lái dài guò 
+Why do I still have to smile when passing you
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		我沒有這種天份
+	</p>
+	<p class="simplified">
+		我没有这种天份
+	</p>
+	<p class="pinyin">
+		wǒ méi yǒu zhè zhǒng tiān fèn 
+	</p>
+	<pre class="english">
+wǒ méi yǒu zhè zhǒng tiān fèn 
+I don't have this talent of
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		包容你也接受他
+	</p>
+	<p class="simplified">
+		包容你也接受他
+	</p>
+	<p class="pinyin">
+		bāo róng nǐ yě jiē shòu tā 
+	</p>
+	<pre class="english">
+bāo róng nǐ yě jiē shòu tā 
+Loving you and accepting him
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		這些我都做得到
+	</p>
+	<p class="simplified">
+		这些我都做得到
+	</p>
+	<p class="pinyin">
+		zhè xiē wǒ dū zuò dé dào 
+	</p>
+	<pre class="english">
+zhè xiē wǒ dū zuò dé dào 
+I can do it all
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		但那個人已經不是我
+	</p>
+	<p class="simplified">
+		但那个人已经不是我
+	</p>
+	<p class="pinyin">
+		dàn nà gè rén yǐ jīng bù shì wǒ 
+	</p>
+	<pre class="english">
+dàn nà gè rén yǐ jīng bù shì wǒ 
+But that person is not me anymore
+	</pre>
+</div>
+<br />
+<div class="line">
+	<p class="chinese">
+		如果有一天
+	</p>
+	<p class="simplified">
+		如果有一天
+	</p>
+	<p class="pinyin">
+		rú guǒ yǒu yī tiān 
+	</p>
+	<pre class="english">
+rú guǒ yǒu yī tiān 
+If there is a day
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		夢想都實現
+	</p>
+	<p class="simplified">
+		梦想都实现
+	</p>
+	<p class="pinyin">
+		mèng xiǎng dū shí xiàn 
+	</p>
+	<pre class="english">
+mèng xiǎng dū shí xiàn 
+Where my dreams come true
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		回憶都成了永遠
+	</p>
+	<p class="simplified">
+		回忆都成了永远
+	</p>
+	<p class="pinyin">
+		huí yì dū chéng liǎo yǒng yuǎn 
+	</p>
+	<pre class="english">
+huí yì dū chéng liǎo yǒng yuǎn 
+When we cannot relieve our memories
+	</pre>
+</div>
+<div class="line">
+	<p class="chinese">
+		你是否還會記得今天
+	</p>
+	<p class="simplified">
+		你是否还会记得今天
+	</p>
+	<p class="pinyin">
+		nǐ shì fǒu huán huì jì dé jīn tiān
+	</p>
+	<pre class="english">
+nǐ shì fǒu huán huì jì dé jīn tiān
+Will you still remember today?
+	</pre>
+</div>
+
+
+</div>
+
+<script type="text/javascript">
+	var contentDiv = document.getElementById('content');
+	var supportedSets = ['chinese', 'simplified', 'pinyin']
+	var styleTag = document.getElementById('mutable-style');
+
+	let changeStyle = function(characterSet) {
+		let styleString = '';
+		for (let i = 0; i < supportedSets.length; i++) {
+			styleString += `.${ supportedSets[i] } { display: ${ characterSet === supportedSets[i] ? 'inline-block' : 'none' }; }`
+		}
+		styleTag.innerHTML = styleString;
+	}
+
+	let rad = document.characterSetForm.characterSet;
+	for (let i = 0; i < rad.length; i++) {
+		rad[i].addEventListener('change', (event) => { 
+			changeStyle(event.target.value); 
+		});
+	}
+
+	document.characterSetForm.selectable.addEventListener('change', (event) => {
+		if (event.target.checked) {
+			contentDiv.classList.remove("no-select")
+		} else {
+			contentDiv.classList.add("no-select")
+		}
+	})
+</script>
