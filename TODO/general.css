@@ -1,0 +1,114 @@
+@import url('http://fonts.googleapis.com/css?family=Lato');
+#body {
+  background: #333;
+  width: 70%;
+  margin-left: 15%;
+  font-family: 'Lato', sans-serif;
+  padding-bottom: 3em;
+
+
+}
+
+.modified, .created {
+  display: none;
+}
+
+a{
+  color: #f22;
+  text-decoration: none;
+  float: left;
+  width: 15%;
+}
+
+.category-header a:first-child {
+  color: #FFF;
+
+}
+.category-header .body a{
+  color: #f22;
+}
+
+.CategoryList {
+  width: 70%;
+  padding: 0;
+
+}
+.CategoryList>li, #MasterList {
+  list-style-type: none;
+}
+#MasterList {
+  padding: 0;
+  margin: 0;
+}
+
+#MasterList ul {
+  float: left;
+}
+
+#MasterList>li, .node {
+  background-color: #111;
+  border: 2px solid black;
+  border-radius: 3px;
+  color: #FFF;
+  clear: both;
+  
+}
+
+.ClearerDiv {
+  clear: both;
+}
+
+.node {
+}
+.node p {
+  margin: 5px;
+}
+
+#UrgentLI a {
+  color: #F22;
+}
+
+#DoneLI a {
+  color: #5F5;
+}
+
+.body {
+  margin-left: 15px;
+  color: #DDD;
+  font-size: 0.9em;
+  padding-bottom: 7px; 
+  overflow: auto;
+}
+
+.node .metaData {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+}
+
+.node:hover .metaData {
+  display: block;
+}
+
+input {
+   border-radius: 8px;
+   padding: 0.4em;
+   margin: 0.5em;
+   width: 25%;
+   border: 3px solid #111;
+   background-color: #222;
+   color: #FFF;
+  }
+
+#controls {
+  text-align: center;
+  position: fixed;
+  bottom: 5px;
+  width: 70%;
+}
+
+.done {
+  color: #5F5;
+}
