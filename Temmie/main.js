@@ -43,3 +43,5 @@ function moveEyes(e) {
     rightEye.style.transform = `translate(${rightV.x}px, ${rightV.y}px)`;
 
 }
+
+window.onmousemove = moveEyes
