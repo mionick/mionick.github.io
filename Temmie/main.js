@@ -2,20 +2,23 @@ let rightEye = document.getElementById('right-eye')
 let leftEye = document.getElementById('left-eye')
 let svg = document.getElementById("temmie");
 let leftMax = 50;
-let RightMax = 70;
+let rightMax = 70;
 
-let boxHeight = svg.clientHeight;
-let boxWidth = window.innerWidth;
+const svgBaseWidth = 2225;
+const svgBaseHeight = 2000;
+const svgPosition = offset(svg);
 
-let centerOfEyesX = (offset(svg).top + 1350 * svg.clientWidth / 2300) / boxWidth;
-let centerOfEyesY = (offset(svg).left + 500 * svg.clientHeight / 2000) / boxHeight;
+let centerOfEyesX = svgPosition.left + 1350 * svg.clientWidth / svgBaseWidth;
+let centerOfEyesY = svgPosition.top + 500 * svg.clientHeight / svgBaseHeight;
 
-let centerOfRightEyeX = (offset(svg).top + 1560 * svg.clientWidth / 2300) / boxWidth;
-let centerOfRightEyeY = (offset(svg).left + 475 * svg.clientHeight / 2000) / boxHeight;
+let centerOfRightEyeX = svgPosition.left + 1560 * svg.clientWidth / svgBaseWidth;
+let centerOfRightEyeY = svgPosition.top + 475 * svg.clientHeight / svgBaseHeight;
 
-let centerOfLeftEyeX = (offset(svg).top + 1140 * svg.clientWidth / 2300) / boxWidth;
-let centerOfLeftEyeY = (offset(svg).left + 495 * svg.clientHeight / 2000) / boxHeight;
+let centerOfLeftEyeX = svgPosition.left + 1140 * svg.clientWidth / svgBaseWidth;
+let centerOfLeftEyeY = svgPosition.top + 495 * svg.clientHeight / svgBaseHeight;
 
+let rCent = new Vector(centerOfRightEyeX, centerOfRightEyeY, 0);
+let lCent = new Vector(centerOfLeftEyeX, centerOfLeftEyeY, 0);
 
 function offset(el) {
     let rect = el.getBoundingClientRect(),
@@ -24,56 +27,19 @@ function offset(el) {
     return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
 }
 
-function mag(x, y) {
-    return Math.sqrt(x*x + y*y);
-}
-
-
 function moveEyes(e) {
-    let x = (e.clientX / boxWidth);
-    let y = (e.clientY / boxHeight);
+    let x = (e.clientX);
+    let y = (e.clientY);
 
-    yOffset = y - centerOfEyesY;
-    xLeftOffset = x - centerOfLeftEyeX;
-    xRightOffset = x - centerOfRightEyeX;
+    let cursor = new Vector(x, y, 50);
 
-    let xLeftPercent;
-    let yLeftPercent;
-    let xRightPercent;
-    let yRightPercent;
+    let leftV = cursor.subtract(lCent);
+    let rightV = cursor.subtract(rCent);
 
-    if (yOffset < 0) {
-        yLeftPercent = yOffset / (centerOfEyesY)
-    } else {
-        yLeftPercent = yOffset / (1 - centerOfEyesY)
-    }
+    Vector.multiply(leftV, leftMax/leftV.length(), leftV);
+    Vector.multiply(rightV, rightMax/rightV.length(), rightV);
 
-    if (xLeftOffset < 0) {
-        xLeftPercent = xLeftOffset / (centerOfLeftEyeX)
-    } else {
-        xLeftPercent = xLeftOffset / (centerOfEyesX - centerOfLeftEyeX)
-    }
-    
-    if (xRightOffset < 0) {
-        xRightPercent = xRightOffset / (centerOfRightEyeX - centerOfEyesX)
-    } else {
-        xRightPercent = xRightOffset / (1 - (centerOfRightEyeX - centerOfEyesX))
-    }
+    leftEye.style.transform = `translate(${leftV.x}px, ${leftV.y}px)`;
+    rightEye.style.transform = `translate(${rightV.x}px, ${rightV.y}px)`;
 
-    //yLeftPercent = Math.max(Math.min(x, 1), -1);
-    xLeftPercent = Math.max(Math.min(xLeftPercent, 1), -1);
-    xRightPercent = Math.max(Math.min(xRightPercent, 1), -1);
-    //xLeftPercent = Math.max(Math.min(xRightPercent, 1), -1);
-
-    leftMag = mag(xLeftPercent, yLeftPercent);
-    rightMag = mag(xRightPercent, yLeftPercent);
-
-    // xRightPercent = xRightPercent / rightMag; 
-    // yRightPercent = yLeftPercent / rightMag;
-
-    // xLeftPercent = xLeftPercent / leftMag; 
-    // yLeftPercent = yLeftPercent / leftMag; 
-
-    leftEye.style.transform = `translate(${(xLeftPercent) * leftMax}px, ${(yLeftPercent) * leftMax}px)`;
-    rightEye.style.transform = `translate(${(xRightPercent) * RightMax}px, ${(yLeftPercent) * RightMax}px)`;
 }
