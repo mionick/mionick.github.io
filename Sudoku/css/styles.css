@@ -1,0 +1,16 @@
+body {
+	text-align: center;
+}
+#board-parent {
+	position: relative;
+	display: inline-block;
+}
+button {
+	background: #222;
+	color: white;
+	border: 0.3em solid #111 5%;
+}
+
+#dashboard {
+	text-align: center;
+}

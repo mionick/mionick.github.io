@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>The HTML5 Herald</title>
+	<meta name="description" content="Amazing one of a kinf super efficient Sudoku solver 2019" />
+	<meta name="author" content="SitePoint" />
+
+	<link rel="stylesheet" href="css/styles.css?v=1.0" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+	<script src="main.js" ></script>
+
+</head>
+
+<body onload="init();">
+	<div id="board-parent">
+		<canvas id="sudCanvas" width="500" height="500">
+		</canvas>
+		<div id="board"></div>
+	</div>
+	<div id="dashboard">
+		<button onclick="solveClick()">Solve</button>
+		<button onclick="clearAllClick()">Clear All</button>
+		<button onclick="clearClick()">Clear Solved</button>
+	</div>
+</body>
+</html>
