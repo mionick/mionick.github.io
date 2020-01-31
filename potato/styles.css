@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    text-align: center;
+    width: 100%;
+    background: black;
+}
+svg {
+    width: 50%;
+    height: auto;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* one for each animated path */
+#eye1 {
+    stroke-dasharray: 302;
+    stroke-dashoffset: 302;
+    animation: draw 0.5s linear forwards;
+}
+
+#eye2 {
+    stroke-dasharray: 378;
+    stroke-dashoffset: 378;
+    animation: draw 0.5s linear forwards;
+    animation-delay: 0.5s;
+}
+
+#p1 {
+    stroke-dasharray: 2020;
+    stroke-dashoffset: 2020;
+    animation: draw 0.5s linear forwards;
+    animation-delay: 1s;
+}
+
+#p2 {
+    stroke-dasharray: 1600;
+    stroke-dashoffset: 1600;
+    animation: draw 0.5s linear forwards;
+    animation-delay: 1.5s;
+}
+
+#thumbarm {
+    stroke-dasharray: 1004;
+    stroke-dashoffset: 1004;
+    animation: draw 0.5s linear forwards;
+    animation-delay: 2s;
+}
+
+#eyebrow1 {
+    stroke-dasharray: 191;
+    stroke-dashoffset: 191;
+    animation: draw 0.25s linear forwards;
+    animation-delay: 2.5s;
+}
+#eyebrow2 {
+    stroke-dasharray: 240;
+    stroke-dashoffset: 240;
+    animation: draw 0.25s linear forwards;
+    animation-delay: 2.75s;
+}
+
+#slaparm {
+    stroke-dasharray: 1400;
+    stroke-dashoffset: 1400;
+    animation: draw 0.5s linear forwards;
+    animation-delay: 3s;
+}
+
+#t1 {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: draw 0.1s linear forwards;
+    animation-delay: 3.5s;
+}
+
+#t2 {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: draw 0.1s linear forwards;
+    animation-delay: 3.5s;
+}
+
+#t3 {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: draw 0.1s linear forwards;
+    animation-delay: 3.5s;
+}
+
+#t4 {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: draw 0.1s linear forwards;
+    animation-delay: 3.5s;
+}
+
+#t5 {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: draw 0.1s linear forwards;
+    animation-delay: 3.5s;
+}
+
+#t6 {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: draw 0.1s linear forwards;
+    animation-delay: 3.5s;
+}
+
+#t7 {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: draw 0.1s linear forwards;
+    animation-delay: 3.5s;
+}
