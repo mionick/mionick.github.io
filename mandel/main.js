@@ -24,6 +24,10 @@ KeyCode.KEY_RIGHT = 39;
 KeyCode.KEY_DOWN = 40;
 KeyCode.KEY_PAGE_UP = 33;
 KeyCode.KEY_PAGE_DOWN = 34;
+KeyCode.KEY_A = 65;
+KeyCode.KEY_Q = 81;
+KeyCode.KEY_S = 83;
+KeyCode.KEY_W = 87;
 KeyCode.KEY_X = 88;
 KeyCode.KEY_Z = 90;
 
@@ -96,25 +100,29 @@ HTMLCanvasElement.prototype.relMouseCoords = relMouseCoords;
 
 function render() {
     for (let i = 0; i < width; i+=1) {
-        for (let j = 0; j < height; j+=1) {
-            let cmp = new Complex(magnification*(i / width - 0.5) - x,magnification*(j / height - 0.5) - y);
-            let current = mandelbrot(new Complex(0,0), cmp);
-            if (current[0] < maxIterations) {
-                // Then it escaped
-                //draw pixel here dark.
-                let factor = Math.sqrt(current[0] / maxIterations);
-                let color = Math.floor(factor * 255);//current[1].abs() * 500 ;
-                
-                //ctx.fillStyle = `rgb(${Math.floor(color/2)}, ${Math.floor(color/2)}, ${Math.floor(color/2)})`;
-                ctx.fillStyle = `rgb(${color}, ${color}, ${color})`;
-                ctx.fillRect( i, j, 1, 1 );
-            } else {
-                //ctx.fillStyle = `rgb(255, 255, 255)`;
-                ctx.fillStyle = `rgb(0, 0, 0)`;
-                ctx.fillRect( i, j, 1, 1 );
+        let innerI = i;
+        setTimeout( () => {
+            for (let j = 0; j < height; j+=1) {
+                let cmp = new Complex(magnification*(innerI / width - 0.5) - x,magnification*(j / height - 0.5) - y);
+                let current = mandelbrot(new Complex(0,0), cmp);
+                if (current[0] < maxIterations) {
+                    // Then it escaped
+                    //draw pixel here dark.
+                    let factor = Math.sqrt(current[0] / maxIterations);
+                    let color = Math.floor(factor * 255);//current[1].abs() * 500 ;
+                    
+                    //ctx.fillStyle = `rgb(${Math.floor(color/2)}, ${Math.floor(color/2)}, ${Math.floor(color/2)})`;
+                    ctx.fillStyle = `rgb(${color}, ${color}, ${color})`;
+                    ctx.fillRect( innerI, j, 1, 1 );
+                } else {
+                    //ctx.fillStyle = `rgb(255, 255, 255)`;
+                    ctx.fillStyle = `rgb(0, 0, 0)`;
+                    ctx.fillRect( innerI, j, 1, 1 );
+                }
+        
             }
-    
-        }
+        }, 0)
+        
     }
 }
 
@@ -180,6 +188,22 @@ document.addEventListener("keydown", event => {
         zoomIn();
     } else if (event.keyCode === KeyCode.KEY_Z) {
         zoomOut();
+    } else if (event.keyCode === KeyCode.KEY_A) {
+        maxIterations = Math.max(1, maxIterations / 2);
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(render, 0);
+    } else if (event.keyCode === KeyCode.KEY_S) {
+        maxIterations = Math.max(1, maxIterations * 2);
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(render, 0);
+    } else if (event.keyCode === KeyCode.KEY_Q) {
+        maxAllowed = Math.max(1, maxAllowed / 2);
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(render, 0);
+    } else if (event.keyCode === KeyCode.KEY_W) {
+        maxAllowed = Math.max(1, maxAllowed * 2);
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(render, 0);
     } 
 });
 canvas.addEventListener('click', function(e) { 
