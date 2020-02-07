@@ -1,0 +1,15 @@
+.nm-timeline-left {
+    margin-left: 5%;
+    margin-right: 2.5%;
+    width: 42.5%;
+    float: left;
+}
+.nm-timeline-right {
+    margin-left: 2.5%;
+    width: 42.5%;
+    float: left;
+}
+
+body {
+    text-align: center;
+}
